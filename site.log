@@ -16,3 +16,11 @@
 [26/May/2014:10:39:20] ENGINE Bus EXITED
 [26/May/2014:10:39:20] ENGINE Waiting for child threads to terminate...
 [26/May/2014:10:39:20] ENGINE Re-spawning /home/bilous/IdeaProjects/etronik/bin/cherryd -i webApp -c dev.conf
+[26/May/2014:11:47:30] ENGINE Listening for SIGHUP.
+[26/May/2014:11:47:30] ENGINE Listening for SIGTERM.
+[26/May/2014:11:47:30] ENGINE Listening for SIGUSR1.
+[26/May/2014:11:47:30] ENGINE Bus STARTING
+[26/May/2014:11:47:30] ENGINE Started monitor thread 'Autoreloader'.
+[26/May/2014:11:47:30] ENGINE Started monitor thread '_TimeoutMonitor'.
+[26/May/2014:11:47:30] ENGINE Serving on http://127.0.0.1:8080
+[26/May/2014:11:47:30] ENGINE Bus STARTED
