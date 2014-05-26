@@ -1,0 +1,18 @@
+[26/May/2014:10:27:03] ENGINE Listening for SIGHUP.
+[26/May/2014:10:27:03] ENGINE Listening for SIGTERM.
+[26/May/2014:10:27:03] ENGINE Listening for SIGUSR1.
+[26/May/2014:10:27:03] ENGINE Bus STARTING
+[26/May/2014:10:27:03] ENGINE Started monitor thread 'Autoreloader'.
+[26/May/2014:10:27:03] ENGINE Started monitor thread '_TimeoutMonitor'.
+[26/May/2014:10:27:03] ENGINE Serving on http://127.0.0.1:8080
+[26/May/2014:10:27:03] ENGINE Bus STARTED
+[26/May/2014:10:39:20] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/lib/python2.7/posixpath.py changed.
+[26/May/2014:10:39:20] ENGINE Stopped thread 'Autoreloader'.
+[26/May/2014:10:39:20] ENGINE Bus STOPPING
+[26/May/2014:10:39:20] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[26/May/2014:10:39:20] ENGINE Stopped thread '_TimeoutMonitor'.
+[26/May/2014:10:39:20] ENGINE Bus STOPPED
+[26/May/2014:10:39:20] ENGINE Bus EXITING
+[26/May/2014:10:39:20] ENGINE Bus EXITED
+[26/May/2014:10:39:20] ENGINE Waiting for child threads to terminate...
+[26/May/2014:10:39:20] ENGINE Re-spawning /home/bilous/IdeaProjects/etronik/bin/cherryd -i webApp -c dev.conf
