@@ -85,19 +85,18 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-        </div>
-        <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-       </div>
-        <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+          <h2>Search</h2>
+          <form name="data" action="/test" method="POST">
+            <div class="form-group">
+            <input name="title" class="form-control" type="text" placeholder="Title"/><br/>
+            <input name="author" class="form-control" type="text" placeholder="author"/><br/>
+            <input name="annee" class="form-control" type="text" placeholder="2014"/><br/>
+            <input name="query" class="form-control" type="text" placeholder="some words..."/>
+          </div>
+            <div class="form-group">
+            <button type="submit" class="btn btn-success">Check this out !</button>
+          </div>
+          </form>
         </div>
       </div>
     {% endblock content %}
