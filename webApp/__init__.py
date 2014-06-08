@@ -25,6 +25,11 @@ class Root:
         return template_index.render()
 
     @cherrypy.expose
+    def response(self, title, author, annee, query):
+        template_index=env.get_template('response.html')
+        return template_index.render(_title = title, _author= author, _annee = annee, _query = query )
+
+    @cherrypy.expose
     def test(self, title, author, annee, query):
     	a=title+" "+author+" "+annee+" "+query
     	return a
