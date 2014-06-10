@@ -1868,3 +1868,39 @@ Request Headers:
 [08/Jun/2014:12:04:07] ENGINE Bus EXITING
 [08/Jun/2014:12:04:07] ENGINE Bus EXITED
 [08/Jun/2014:12:04:07] ENGINE Waiting for child threads to terminate...
+[09/Jun/2014:14:05:24] ENGINE Listening for SIGHUP.
+[09/Jun/2014:14:05:24] ENGINE Listening for SIGTERM.
+[09/Jun/2014:14:05:24] ENGINE Listening for SIGUSR1.
+[09/Jun/2014:14:05:24] ENGINE Bus STARTING
+[09/Jun/2014:14:05:24] ENGINE Started monitor thread '_TimeoutMonitor'.
+[09/Jun/2014:14:05:24] ENGINE Started monitor thread 'Autoreloader'.
+[09/Jun/2014:14:05:24] ENGINE Serving on 127.0.0.1:8080
+[09/Jun/2014:14:05:24] ENGINE Bus STARTED
+[09/Jun/2014:14:41:42] ENGINE Caught signal SIGHUP.
+[09/Jun/2014:14:41:42] ENGINE SIGHUP caught while daemonized. Restarting.
+[09/Jun/2014:14:41:42] ENGINE Bus STOPPING
+[09/Jun/2014:14:41:42] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[09/Jun/2014:14:41:42] ENGINE Stopped thread '_TimeoutMonitor'.
+[09/Jun/2014:14:41:42] ENGINE Stopped thread 'Autoreloader'.
+[09/Jun/2014:14:41:42] ENGINE Bus STOPPED
+[09/Jun/2014:14:41:42] ENGINE Bus EXITING
+[09/Jun/2014:14:41:42] ENGINE Bus EXITED
+[09/Jun/2014:14:41:42] ENGINE Waiting for child threads to terminate...
+[09/Jun/2014:14:41:42] ENGINE Re-spawning /usr/sbin/cherryd -i webApp -c dev.conf
+[09/Jun/2014:14:41:42] ENGINE Listening for SIGHUP.
+[09/Jun/2014:14:41:42] ENGINE Listening for SIGTERM.
+[09/Jun/2014:14:41:42] ENGINE Listening for SIGUSR1.
+[09/Jun/2014:14:41:42] ENGINE Bus STARTING
+[09/Jun/2014:14:41:42] ENGINE Started monitor thread 'Autoreloader'.
+[09/Jun/2014:14:41:42] ENGINE Started monitor thread '_TimeoutMonitor'.
+[09/Jun/2014:14:41:43] ENGINE Serving on 127.0.0.1:8080
+[09/Jun/2014:14:41:43] ENGINE Bus STARTED
+[09/Jun/2014:14:41:55] ENGINE Caught signal SIGTERM.
+[09/Jun/2014:14:41:55] ENGINE Bus STOPPING
+[09/Jun/2014:14:41:55] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[09/Jun/2014:14:41:55] ENGINE Stopped thread '_TimeoutMonitor'.
+[09/Jun/2014:14:41:55] ENGINE Stopped thread 'Autoreloader'.
+[09/Jun/2014:14:41:55] ENGINE Bus STOPPED
+[09/Jun/2014:14:41:55] ENGINE Bus EXITING
+[09/Jun/2014:14:41:55] ENGINE Bus EXITED
+[09/Jun/2014:14:41:55] ENGINE Waiting for child threads to terminate...
