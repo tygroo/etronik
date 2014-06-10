@@ -1921,3 +1921,20 @@ Request Headers:
 [10/Jun/2014:12:02:08] ENGINE Bus EXITING
 [10/Jun/2014:12:02:08] ENGINE Bus EXITED
 [10/Jun/2014:12:02:08] ENGINE Waiting for child threads to terminate...
+[10/Jun/2014:12:06:11] ENGINE Listening for SIGHUP.
+[10/Jun/2014:12:06:11] ENGINE Listening for SIGTERM.
+[10/Jun/2014:12:06:11] ENGINE Listening for SIGUSR1.
+[10/Jun/2014:12:06:11] ENGINE Bus STARTING
+[10/Jun/2014:12:06:11] ENGINE Started monitor thread '_TimeoutMonitor'.
+[10/Jun/2014:12:06:11] ENGINE Started monitor thread 'Autoreloader'.
+[10/Jun/2014:12:06:11] ENGINE Serving on 127.0.0.1:8080
+[10/Jun/2014:12:06:11] ENGINE Bus STARTED
+[10/Jun/2014:12:09:32] ENGINE Keyboard Interrupt: shutting down bus
+[10/Jun/2014:12:09:32] ENGINE Bus STOPPING
+[10/Jun/2014:12:09:32] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/Jun/2014:12:09:32] ENGINE Stopped thread '_TimeoutMonitor'.
+[10/Jun/2014:12:09:32] ENGINE Stopped thread 'Autoreloader'.
+[10/Jun/2014:12:09:32] ENGINE Bus STOPPED
+[10/Jun/2014:12:09:32] ENGINE Bus EXITING
+[10/Jun/2014:12:09:32] ENGINE Bus EXITED
+[10/Jun/2014:12:09:32] ENGINE Waiting for child threads to terminate...
