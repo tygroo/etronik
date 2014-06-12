@@ -3,10 +3,12 @@
 import os
 import cgi
 import cgitb; cgitb.enable()  # for troubleshooting
-
+import moteur
 import cherrypy
+import json
+#import execjs
+from pymongo import *
 from cherrypy.lib.static import serve_file
-
 from jinja2 import Template, Environment, FileSystemLoader
 
 #class level variables
@@ -17,10 +19,7 @@ current_dir=os.path.dirname(os.path.abspath(__file__))
 #setup some rendering templates
 env=Environment(loader=FileSystemLoader(current_dir), trim_blocks=True)
 
-import json
-import moteur
-import execjs
-from pymongo import *
+
 
 def toDisplay(title,obj):
     table = "<table><th>"+title+"</th>"    
@@ -60,6 +59,3 @@ class Root:
         #contents = toDisplay("contents",moteur.afficher('content',query))
         #return template_index.render(_titres = titres,_auteurs = auteurs,_annees = annees,_contents = contents,
         #    _title = titre, _author= auteur, _annee = annee, _query = query )
-
-
-
