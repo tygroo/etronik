@@ -1,9 +1,6 @@
 import moteurInsersion
-import parser2
 import os
 from pymongo import MongoClient
-import pdf2txt
-import dumppdf
 import subprocess
 import sys
 
