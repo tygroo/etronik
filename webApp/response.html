@@ -1,20 +1,16 @@
 {% extends "base.html" %}
 
-{% block title %}Page de reponse{% endblock title %}
+{% block title %}Résults{% endblock title %}
 
 {% block content %}
 
  <div class="jumbotron">
       <div class="container">
-        <h2>Les premières réponses sont : </h2>
-        <p>...</p>
-      </div>
-    </div>
-
-<div class="jumbotron">
-      <div class="container">
-        <h3>Les reponses générales sont : </h3>
-        <p>...</p>
+        <h2>Résultats de la recherche :</h2>
+        <p>{{_titres}}</p>
+        <p>{{_auteurs}}</p>
+        <p>{{_annees}}</p>
+        <p>{{_contents}}</p>
       </div>
     </div>
 

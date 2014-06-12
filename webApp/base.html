@@ -37,25 +37,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="/">Search Engine</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
+            <li class="active"><a href="/base">Home</a></li>
+            <li><a href="/about">About</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <div class="form-group">
@@ -70,20 +57,14 @@
       </div>
     </div>
 
- <div class="jumbotron">
+
+
+    {% block content %}
+
+    <div class="jumbotron">
       <div class="container">
         <h2>Recherche de documents</h2>
         <p>Cherchez un document en fonction des critéres de recherche si dessous.</p>
-      </div>
-    </div>
-
-    {% block content %}
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h2>Recherchez ....</h2>
-        <p>...</p>
-       <!-- <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p> -->
       </div>
     </div>
 
@@ -94,10 +75,10 @@
           <h2>Search</h2>
           <form name="data" action="/response" method="POST">
             <div class="form-group">
-            <input name="title" class="form-control" type="text" placeholder="Title"/><br/>
-            <input name="author" class="form-control" type="text" placeholder="author"/><br/>
-            <input name="annee" class="form-control" type="text" placeholder="2014"/><br/>
-            <input name="query" class="form-control" type="text" placeholder="some words..."/>
+            <input name="titre" class="form-control" type="text" placeholder="Titre"/><br/>
+            <input name="auteur" class="form-control" type="text" placeholder="Auteur"/><br/>
+            <input name="annee" class="form-control" type="text" placeholder="Date"/><br/>
+            <input name="query" class="form-control" type="text" placeholder="Recherche libre"/>
           </div>
             <div class="form-group">
             <button type="submit" class="btn btn-success">Check this out !</button>
@@ -111,6 +92,9 @@
 
       <footer>
         {% block footer %}
+              <center>
+        <h3>Search Engine v1.0 - 2014</h3>
+      </center>
         <p>&copy; Company 2013</p>
         {% endblock footer %}
       </footer>
