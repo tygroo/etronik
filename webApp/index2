@@ -1,0 +1,355 @@
+Remerciements 
+
+Je tiens à remercier M. Sylvain Labasse de m’avoir accompagné dans la rédaction de 
+
+ce mémoire et d’avoir répondu présent lors de mes différentes sollicitations.  
+
+Je  remercie  également  le  corps  enseignant  de  l’EPSI  qui  a  assuré  le  côté  formation 
+
+théorique et qui m’a permis d’avoir une bonne base de connaissances pour la réalisation de 
+
+ce mémoire. 
+
+Enfin, je remercie M. Franck Louis Victor de m’avoir accepté en tant qu’alternant au 
+
+sein de l’entreprise net-Sense. Grâce à mon tuteur M. David Audrain et à toute l’équipe de 
+
+Bordeaux, 
+
+j’ai  pu  approfondir,  au  cours  de  cette  année,  mes  connaissances  en 
+
+développements en particulier sur les plateformes mobiles. 
+
+ 
+
+ 
+
+Sommaire 
+
+Introduction ................................................................................................................................ 3 
+
+I. 
+
+Capacités d’un assistant mobile ....................................................................................... 11 
+
+A. 
+
+Systèmes de reconnaissance ........................................................................................ 11 
+
+B. 
+
+Situation dans l’espace ................................................................................................. 23 
+
+C. 
+
+Services ......................................................................................................................... 35 
+
+II. 
+
+Limitations de l’assistant mobile....................................................................................... 42 
+
+A.  Contraintes matérielles spécifiques au mobile ............................................................ 42 
+
+B.  Contraintes techniques ................................................................................................. 47 
+
+C. 
+
+Intelligence Artificielle .................................................................................................. 53 
+
+D.  Contraintes dues à la mobilité ...................................................................................... 56 
+
+III.  Solution et Évolution de l’assistant mobile ....................................................................... 60 
+
+A. 
+
+Solutions techniques .................................................................................................... 60 
+
+B. 
+
+Sécurisation des données ............................................................................................. 66 
+
+C.  Nouvelle vision de l’assistant mobile avec l’agrégation de donnée ............................. 75 
+
+Conclusion ................................................................................................................................ 90 
+
+Glossaire ................................................................................................................................... 98 
+
+Liste des tableaux, schéma et illustrations ............................................................................. 107 
+
+Tableau ................................................................................................................................ 107 
+
+Illustrations ......................................................................................................................... 107 
+
+Schéma ............................................................................................................................... 108 
+
+Table des matières .................................................................................................................. 110 
+
+Bibliographie ........................................................................................................................... 115 
+
+Annexes ................................................................................................................................... 120 
+
+ 
+
+1 
+
+Annexe I : Exemple d’obfuscation de code ......................................................................... 120 
+
+Annexe II : Schéma d’une transaction BitCoin .................................................................... 124 
+
+Annexe III : Résumé en anglais ........................................................................................... 125 
+
+ 
+
+2 
+
+ 
+
+ 
+
+Introduction 
+
+Aujourd’hui, le téléphone portable occupe une place toujours plus importante dans la 
+
+vie quotidienne. En effet, d’après l’« Ericsson Mobility Report » de novembre 2012, 61% de la 
+
+population mondiale, soit 4,1 milliards de personnes, possèdent un téléphone portable dont 
+
+1.3 milliard sont des Smartphones*. De plus, selon une étude du site Web « eMarketer » les 
+
+utilisateurs  passe  en  moyenne  82  minutes  par  jour  sur  leurs  téléphones  en  2012,  hors 
+
+communication, alors qu’ils n’en passaient que 22 minutes en 2009. 
+
+Ce qui est intéressant dans ce domaine c’est que l’on travaille sur des plateformes qui 
+
+sont en constante évolution comme nous le montre l’illustration 1. 
+
+Illustration 1 : Évolution de la gamme de mobiles Nokia de 2002 à 2013 
+
+ 
+
+D’une  part,  du  point  de  vue  des  fonctionnalités,  le  mobile  permet  la  démocratisation  des 
+
+dernières technologies telles que la réalité augmentée*, le NFC* ou encore la reconnaissance 
+
+vocale. D’autre part, d’un point de vue technique, les mobiles possèdent des composants de 
+
+plus  en plus puissants  ce  qui  permet d’exécuter  des  algorithmes*  toujours  plus  complexes. 
+
+Tout  cela  permet  de  repousser  le  champ  d’applications  possible  du  mobile.  De  plus,  la 
+
+plupart  des  plateformes  mobiles  permettent  d’avoir  un  retour  direct  et  rapide  de  ses 
+
+utilisateurs. En effet, via des notes et des commentaires, on peut vérifier l’adéquation entre 
+
+la demande des utilisateurs et l’orientation que va prendre l’application. 
+
+ 
+
+3 
+
+Durant ces trois dernières années, j’ai eu la chance de pouvoir mener mes études en 
+
+alternance.  C’est  ainsi  que  j’ai  eu  l’occasion  de  découvrir  le  monde  du  mobile  lors  de  ma 
+
+première  année  d’ingénierie  informatique  et  dans  lequel  j’ai  continué  a  évolué  depuis.  Au 
+
+cours  de  ces  années,  j’ai  eu  l’occasion  de  travailler  sur  différents  types  d’applications.  Tel 
+
+qu’un assistant d’aide à la conduite : iCoyote, un portefeuille de carte de fidélité numérique : 
+
+FidMe, un gestionnaire de ticket restaurant : TicketResto, un assistant pour les assurées Axa : 
+
+Axa  Service  Mobile  ou  encore  un  gestionnaire  de  cave  à  vin :  Smartcave.  Toutes  ces 
+
+applications, bien qu’évoluant dans des domaines totalement différents (la conduite, les vins, 
+
+le commerce, etc.), ont un objectif commun : celui d’aider l’utilisateur dans ses démarches, 
+
+ses  choix,  ses  recherches  ou  son  comportement.  C’est  en  faisant  ce constat  que  j’ai décidé 
+
+d’approfondir, au travers de mon mémoire, la problématique suivante : « Le mobile, assistant 
+
+au quotidien : Capacités, limites et devenir ».  
+
+Les  mobiles  ne  se  limitent  plus  au  simple  appel  téléphonique,  mais  proposent  une 
+
+multitude  de  services  et  de  fonctionnalités.  En  effet,  on  va  pouvoir,  par  exemple,  naviguer 
+
+sur  Internet,  consulter  sa  boite  mail,  planifier  et être avertie  de  ses  rendez-vous ou  encore 
+
+publier sur les réseaux sociaux. Ces téléphones sont appelés « Smartphone », que l’on peut 
+
+traduire  par  « téléphone  intelligent »,  faisant  référence  à  l’étendue  de  leurs  capacités. 
+
+Évidemment, ce sont ces derniers qui vont nous intéresser pour ce mémoire. 
+
+Tous  ces  éléments  qui  sont  désormais  basiques  sur  ce  type  de  téléphone  ne 
+
+représentent  qu’une  partie  de  leur  utilisation  possible.  Une  des  caractéristiques  de  ces 
+
+Smartphones,  c’est  que  l’on  va  pouvoir  y  installer  des  applications,  tout  comme  sur  son 
+
+ordinateur,  afin  d’enrichir  les  fonctionnalités  de  son  mobile.  Ces  dernières  vont  essayer 
+
+d’exploiter au maximum les services offerts par le téléphone pour proposer une expérience 
+
+utilisateur la plus adaptée possible. Par exemple, on va se servir de la position GPS récupérée 
+
+par  le  téléphone  pour  ne  proposer  que  les  services  à  proximité.  En  plus  de  cela,  les 
+
+applications  vont  pouvoir  accéder  à  différents  services  du  téléphone  tels  que  la  connexion 
+
+Internet ou encore les différents capteurs présents sur le téléphone comme l’appareil photo, 
+
+ou le capteur d’orientation*.  
+
+ 
+
+ 
+
+4 
+
+Les  applications  disponibles  pour  les  mobiles  sont  regroupées  en  différentes 
+
+catégories, dont voici les principales : 
+
+ 
+
+Jeux : regroupe tous les jeux vidéo. 
+
+  Enseignement : application aidant l’utilisateur à apprendre des choses. 
+
+  Livre : application de lecture numérique. 
+
+  Divertissement : application gadget, cinéma, programme TV 
+
+  Style de vie : application de commerce et de loisirs. 
+
+  Économie et entreprise : principalement des applications d’offre d’emploi. 
+
+  Utilitaire : outils bureautiques, mail, agenda, etc. 
+
+Ces catégories se répartissent de la manière suivante (Schéma 1) : 
+
+Autres 
+36,4% 
+
+Jeux 
+16,9% 
+
+Enseignement 
+
+10,7% 
+
+Livre 
+8,8% 
+
+Divertissement 
+
+Style de vie 
+
+6,8% 
+
+8,2% 
+
+Utilitaire 
+
+5,9% 
+
+Économie et 
+entreprise 
+
+6,4% 
+
+Schéma 2 : Répartition des catégories d’application mobile 
+
+ 
+
+Le quartier « Autres » regroupe toutes les catégories ayant un pourcentage moins important. 
+
+Les applications que l’on va qualifier d’assistant au quotidien, et qui vont nous intéresser 
+
+pour  ce  mémoire,  se  classeront,  pour  la  plupart,  dans  les  catégories  « Divertissement », 
+
+« Style  de  vie »  et  « Utilitaire ».  Grâce  à  ces  applications,  on  va  pouvoir  se  servir  de  son 
+
+téléphone comme d’un assistant pour diverses tâches du quotidien. 
+
+ Grâce à votre mobile, vous allez pouvoir faire vos courses simplement et efficacement. 
+
+Pour  créer  votre  liste  de  course,  vous  pouvez  la  générer  simplement  à  partir  de  vos 
+
+anciennes listes de course, suivant vos achats récurrents ou directement à partir des recettes 
+
+que vous avez choisi, ou qui vous auront étaient proposées pour avoir des repas équilibrés. 
+
+ 
+
+5 
+
+Ensuite,  plus  besoin  d’aller  faire  vos  courses  dans  les  magasins,  avec  les  services  « drive » 
+
+accessibles  depuis  votre  téléphone,  vous  pouvez  commander  vos  courses,  les  payer 
+
+directement  depuis  votre  téléphone  et  indiquer  à  quelle  heure  vous  voulez  passer  les 
+
+récupérer. De plus, si vous chercher a réalisé des économies vous trouverez des applications 
+
+vous permettant, à partir du nom de l’article ou de la photo de son code-barres, de comparer 
+
+son prix dans tous les magasins les plus proches. Et enfin, afin de soulager votre portefeuille 
+
+de  toutes  vos  cartes  de  fidélité  et  être  sûr  de  l’avoir  au  moment  voulu,  utiliser  une 
+
+application  de  virtualisation  de  vos  cartes  de  crédits  et  de  fidélités  dans  un  portefeuille 
+
+numérique. 
+
+Pour  effectuer  vos  déplacements,  vous  retrouverez  les  classiques  applications  de 
+
+calcul  d’itinéraire  et  de  navigation  par  GPS.  Mais  ce  n’est  pas  tout,  grâce  aux  applications 
+
+d’aide  à  la  conduite  vous  pourrez  indiquer,  et  être  avertie,  des  zones  dangereuses,  des 
+
+bouchons,  des  accidents  et  autres  perturbations  se  situant  sur  votre  route.  Lorsque  vous 
+
+devez  faire  le  plein  d’essence,  penser  à  utiliser  les  applications  de  recherche  de  tarifs  de 
+
+station essence. Ces dernières vous permettront suivant votre position GPS ou une adresse 
+
+de  vous  indiquer  les  tarifs  de  chaque  carburant  des  stations  essences  à  proximité.  Si 
+
+malheureusement vous assistez à un accident ou en avez un, certaines assurances mettent à 
+
+disposition  des  applications  afin  de  vous  accompagner  dans  ce  moment.  Celles-ci  vous 
+
+permettront de connaitre l’adresse exacte de votre position, les gestes à effectuer ou encore 
+
+vous faciliteront les démarches de constats et de déclaration d’accidents. Pour les personnes 
+
+se  déplaçant  en  transport  en  commun,  vous  pourrez  aussi  consulter  les  itinéraires  en 
+
+indiquant votre destination depuis votre mobile. 
+
+ 
+
+Vous  avez  aussi  à  disposition  tout  un  ensemble  d’application  permettant  de  vous 
+
+accompagner dans vos loisirs. Si vous voulez sortir dans un restaurant, un bowling ou autres, 
+
+vous  pouvez  retrouver  tous  les  points  d’intérêt  se  trouvant  à  proximité  avec  des  notes  et 
+
+commentaires  d’autres  utilisateurs.  Une  autre  vous  permettra  de  visionner  tous  les  films 
+
+projetés  dans  les  cinémas  autour  de  vous  et  de  consulter  ses  critiques,  son  résumé,  sa 
+
+bande-annonce  ou  encore  la  liste  des  acteurs  pour  vous  aider  à  faire  votre  choix.  Pour  les 
+
+sportifs, faites vous accompagner par des applications de coaching. 
+
+ 
+
+6 
+
+
