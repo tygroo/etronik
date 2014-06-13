@@ -1,7 +1,12 @@
 from pymongo import MongoClient
 
 client = MongoClient('localhost', 27017)
+
 db = client.epsi
+db.command( { "dropDatabase" : 1 } ) 
+
+db = client.epsi
+
 index1 = db.index1
 index2 = db.index2
 index3 = db.index3

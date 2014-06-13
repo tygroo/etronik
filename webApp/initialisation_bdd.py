@@ -4,9 +4,6 @@ from pymongo import MongoClient
 import subprocess
 import sys
 
-client = MongoClient('localhost', 27017)
-db = client.epsi
-documents = db.documentsTest
 #test = moteurV2.chercherDocument( "bidon1" )
 
 #for e in test:
@@ -39,3 +36,10 @@ for file in dirs:
 	moteurInsersion.insererIndex3( file, temp )
 	fichier.close()
 	print 'index3 fait!'
+
+	# Ouverture du fichier notice en *lecture*
+	fichier = open("notice", "r")
+	temp = fichier.readlines()
+	moteurInsersion.insererNotice( file, temp )
+	fichier.close()
+	print 'notice fait!'

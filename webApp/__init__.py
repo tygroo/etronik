@@ -28,6 +28,18 @@ def toDisplay(title,obj):
     table = table + "</table>"
     return table
     
+def addtoRes(array,data):
+    for item in data:
+        array.append(item)
+    return array
+
+
+def delDuplicate(seq):
+    seen = set()
+    seen_add = seen.add
+    return [ x for x in seq if x not in seen and not seen_add(x)]
+
+
 class Root:
 
     @cherrypy.expose
@@ -46,10 +58,52 @@ class Root:
         return template_index.render()
 
     @cherrypy.expose
-    def response(self, titre, auteur, annee, query):
+    def response(self, titre, auteur, annee, sommaire, query):
+
+        res = []
+
+        # Recherche dans l'index 1
+        titres = moteur.chercheDansIndex1(titre)
+        res = addtoRes(res,titres)
+        auteurs = moteur.chercheDansIndex1(auteur)
+        res = addtoRes(res,auteurs)
+        annees = moteur.chercheDansIndex1(annee)
+        res = addtoRes(res,annees)
+
+        # Recherche dans l'index 2
+        sommaires = moteur.chercheDansIndex1(sommaire)
+        res = addtoRes(res,titres)
+        sommaires = moteur.chercheDansIndex2(sommaire)
+        res = addtoRes(res,titres)
+
+        # Recherche dans l'index 3
+        contents = moteur.chercheDansIndex1(query)
+        res = addtoRes(res,contents)
+        contents = moteur.chercheDansIndex2(query)
+        res = addtoRes(res,contents)
+        contents = moteur.chercheDansIndex3(query)
+        res = addtoRes(res,contents)
+
+        resultsArray = []
+        results = ""
+        strTmp = ""
+        resTmp = []
+        for data in res:
+            if isinstance(data, list):
+                strTmp = ""
+                for data2 in data:
+                    strTmp = strTmp + data2
+                resultsArray.append(strTmp) 
+
+        resTmp = delDuplicate(resultsArray)
+
+        for dataTmp in resTmp:
+            print dataTmp
+            results=results+dataTmp
+
+
         template_index=env.get_template('response.html')
-        
-        return template_index.render(_titres = "titres",_auteurs = "auteurs",_annees = "annees",_contents = "contents",
+        return template_index.render(_results= results,
         _title = titre, _author= auteur, _annee = annee, _query = query )
 
         
