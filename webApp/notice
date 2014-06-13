@@ -1,18 +1,21 @@
 <?xml version="1.0"?>
-<p class="titre">
-  <a href="docs/M13_LEAUTE.pdf">docs/M13_LEAUTE.pdf</a>
-</p><div class="description">
-  <p>EPSI Bordeaux</p>
-  <p>       Net</p>
-  <p>73 rue de Marseille</p>
-  <p>       7 rue Fénélon</p>
-  <p>000 Bordeaux</p>
-  <p>       33</p>
-  <p>000 Bordeaux</p>
-  <p>Le mobile, assistant au quotidien</p>
-  <p>: Capacités, limites et devenir</p>
-  <p>Alexis Léauté</p>
-  <p>Directeur de Recherche</p>
-  <p>Sylvain Labasse</p>
-  <p>       Promotion</p>
+<div class="document">
+  <p class="titre">
+    <a href="docs/M13_LEAUTE.pdf">docs/M13_LEAUTE.pdf</a>
+  </p>
+  <div class="description">
+    <p>EPSI Bordeaux</p>
+    <p>       Net</p>
+    <p>73 rue de Marseille</p>
+    <p>       7 rue Fénélon</p>
+    <p>000 Bordeaux</p>
+    <p>       33</p>
+    <p>000 Bordeaux</p>
+    <p>Le mobile, assistant au quotidien</p>
+    <p>: Capacités, limites et devenir</p>
+    <p>Alexis Léauté</p>
+    <p>Directeur de Recherche</p>
+    <p>Sylvain Labasse</p>
+    <p>       Promotion</p>
+  </div>
 </div>

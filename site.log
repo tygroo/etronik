@@ -16282,3 +16282,57 @@ Sort: {}
 Proj: { _id: 0, titre: 1 }
  planner returned error: need exactly one text index for $text query
 
+[13/Jun/2014:23:04:28] ENGINE Restarting because /usr/lib/python2.7/dist-packages/pymongo/__init__.py changed.
+[13/Jun/2014:23:04:28] ENGINE Stopped thread 'Autoreloader'.
+[13/Jun/2014:23:04:28] ENGINE Bus STOPPING
+[13/Jun/2014:23:04:28] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[13/Jun/2014:23:04:28] ENGINE Stopped thread '_TimeoutMonitor'.
+[13/Jun/2014:23:04:28] ENGINE Bus STOPPED
+[13/Jun/2014:23:04:28] ENGINE Bus EXITING
+[13/Jun/2014:23:04:28] ENGINE Bus EXITED
+[13/Jun/2014:23:04:28] ENGINE Waiting for child threads to terminate...
+[13/Jun/2014:23:04:28] ENGINE Re-spawning /usr/sbin/cherryd -i webApp -c dev.conf
+[13/Jun/2014:23:04:28] ENGINE Listening for SIGHUP.
+[13/Jun/2014:23:04:28] ENGINE Listening for SIGTERM.
+[13/Jun/2014:23:04:28] ENGINE Listening for SIGUSR1.
+[13/Jun/2014:23:04:28] ENGINE Bus STARTING
+[13/Jun/2014:23:04:28] ENGINE Started monitor thread 'Autoreloader'.
+[13/Jun/2014:23:04:28] ENGINE Started monitor thread '_TimeoutMonitor'.
+[13/Jun/2014:23:04:28] ENGINE Serving on 127.0.0.1:8081
+[13/Jun/2014:23:04:28] ENGINE Bus STARTED
+[13/Jun/2014:23:27:05] ENGINE Restarting because /usr/lib/python2.7/dist-packages/pymongo/__init__.py changed.
+[13/Jun/2014:23:27:05] ENGINE Stopped thread 'Autoreloader'.
+[13/Jun/2014:23:27:05] ENGINE Bus STOPPING
+[13/Jun/2014:23:27:05] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[13/Jun/2014:23:27:05] ENGINE Stopped thread '_TimeoutMonitor'.
+[13/Jun/2014:23:27:05] ENGINE Bus STOPPED
+[13/Jun/2014:23:27:05] ENGINE Bus EXITING
+[13/Jun/2014:23:27:05] ENGINE Bus EXITED
+[13/Jun/2014:23:27:05] ENGINE Waiting for child threads to terminate...
+[13/Jun/2014:23:27:05] ENGINE Re-spawning /usr/sbin/cherryd -i webApp -c dev.conf
+[13/Jun/2014:23:27:05] ENGINE Listening for SIGHUP.
+[13/Jun/2014:23:27:05] ENGINE Listening for SIGTERM.
+[13/Jun/2014:23:27:05] ENGINE Listening for SIGUSR1.
+[13/Jun/2014:23:27:05] ENGINE Bus STARTING
+[13/Jun/2014:23:27:05] ENGINE Started monitor thread 'Autoreloader'.
+[13/Jun/2014:23:27:05] ENGINE Started monitor thread '_TimeoutMonitor'.
+[13/Jun/2014:23:27:05] ENGINE Serving on 127.0.0.1:8081
+[13/Jun/2014:23:27:05] ENGINE Bus STARTED
+[13/Jun/2014:23:35:11] ENGINE Restarting because /usr/lib/python2.7/dist-packages/pymongo/__init__.py changed.
+[13/Jun/2014:23:35:11] ENGINE Stopped thread 'Autoreloader'.
+[13/Jun/2014:23:35:11] ENGINE Bus STOPPING
+[13/Jun/2014:23:35:11] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[13/Jun/2014:23:35:11] ENGINE Stopped thread '_TimeoutMonitor'.
+[13/Jun/2014:23:35:11] ENGINE Bus STOPPED
+[13/Jun/2014:23:35:11] ENGINE Bus EXITING
+[13/Jun/2014:23:35:11] ENGINE Bus EXITED
+[13/Jun/2014:23:35:11] ENGINE Waiting for child threads to terminate...
+[13/Jun/2014:23:35:11] ENGINE Re-spawning /usr/sbin/cherryd -i webApp -c dev.conf
+[13/Jun/2014:23:35:11] ENGINE Listening for SIGHUP.
+[13/Jun/2014:23:35:11] ENGINE Listening for SIGTERM.
+[13/Jun/2014:23:35:11] ENGINE Listening for SIGUSR1.
+[13/Jun/2014:23:35:11] ENGINE Bus STARTING
+[13/Jun/2014:23:35:11] ENGINE Started monitor thread 'Autoreloader'.
+[13/Jun/2014:23:35:11] ENGINE Started monitor thread '_TimeoutMonitor'.
+[13/Jun/2014:23:35:11] ENGINE Serving on 127.0.0.1:8081
+[13/Jun/2014:23:35:11] ENGINE Bus STARTED
