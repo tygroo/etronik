@@ -18,15 +18,6 @@ current_dir=os.path.dirname(os.path.abspath(__file__))
 
 #setup some rendering templates
 env=Environment(loader=FileSystemLoader(current_dir), trim_blocks=True)
-
-
-
-def toDisplay(title,obj):
-    table = "<table><th>"+title+"</th>"    
-    for e in obj:
-        table = table+"<tr><td>"+e+"</td><td></tr>"
-    table = table + "</table>"
-    return table
     
 def addtoRes(array,data):
     for item in data:
@@ -48,12 +39,22 @@ class Root:
         return template_index.render()
 
     @cherrypy.expose
+    def pdf(self,lol):
+        
+        stream = open(os.getcwd()+'/webApp/docs/M13_CAMPAGNE.pdf','rb').read()
+        cherrypy.response.headers['Content-Type'] = "application/pdf"
+        cherrypy.response.headers['Content-Length'] = len(stream)
+        cherrypy.response.headers['Expires'] = 0
+        return stream
+        
+
+    @cherrypy.expose
     def base(self):
         template_index=env.get_template('index.html')
         return template_index.render()
 
     @cherrypy.expose
-    def about(self):
+    def about(self,p):
         template_index=env.get_template('about.html')
         return template_index.render()
 

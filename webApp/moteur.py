@@ -26,7 +26,10 @@ def chercheDansIndex2(query):
 	array = []
 	for item in result:
 		for key, value in item.items():
-			array.append(value)
+			res = db.notice.find({"titre":value},{"_id":0,"titre":0})
+			for elem in res:
+				for key2,value2 in elem.items():
+					array.append(value2)
 	return array
 
 def chercheDansIndex3(query):
@@ -34,7 +37,10 @@ def chercheDansIndex3(query):
 	array = []
 	for item in result:
 		for key, value in item.items():
-			array.append(value)
+			res = db.notice.find({"titre":value},{"_id":0,"titre":0})
+			for elem in res:
+				for key2,value2 in elem.items():
+					array.append(value2)
 	return array
 
 def chercherDocument( field,recherche ):
@@ -49,7 +55,7 @@ def chercherDocument( field,recherche ):
 #insererDocument(titre="second", auteur="toi", annee="2015", sommaire="second", body="nlapute")
 
 #A faire a la main dans mongodb
-#documents.ensureIndex({ "titre" : "text", "auteur" : "text", "content" : "text" },{ "default_language": "french" } )
+#documents.ensureIndex({ "titre" : "text", "body" : "text" },{ "default_language": "french" } )
 
 def afficher(field,query):
 	test = chercherDocument(field,query)
