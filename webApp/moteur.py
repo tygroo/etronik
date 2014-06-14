@@ -6,6 +6,10 @@ db = client.epsi
 #Ligne a supprimer (utilisee seulement pour les tests d'insertion)
 #documents.remove()
 
+def getList():
+	res = db.index1.find({},{"_id":0,"body":0})
+	return res
+
 def insererDocument( titre, auteur, annee, sommaire, body ):
 	documents.save({ "titre" : titre, "auteur" : auteur, "annee" : annee, "sommaire" : sommaire, "body" : body });
 	return;

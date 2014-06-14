@@ -40,7 +40,6 @@ class Root:
 
     @cherrypy.expose
     def pdf(self,name):
-        
         stream = open(os.getcwd()+'/webApp/docs/'+name,'rb').read()
         cherrypy.response.headers['Content-Type'] = "application/pdf"
         cherrypy.response.headers['Content-Length'] = len(stream)
@@ -50,8 +49,13 @@ class Root:
 
     @cherrypy.expose
     def base(self):
+        liste=""
+        data = moteur.getList()
+        for item in data:
+            for key,value in item.items():
+                liste=liste+"<a href='/pdf?name="+value+"'>"+value+"</a><br/>"
         template_index=env.get_template('index.html')
-        return template_index.render()
+        return template_index.render(_liste= liste)
 
     @cherrypy.expose
     def about(self,p):
