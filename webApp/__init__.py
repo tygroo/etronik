@@ -39,9 +39,9 @@ class Root:
         return template_index.render()
 
     @cherrypy.expose
-    def pdf(self,lol):
+    def pdf(self,name):
         
-        stream = open(os.getcwd()+'/webApp/docs/M13_CAMPAGNE.pdf','rb').read()
+        stream = open(os.getcwd()+'/webApp/docs/'+name,'rb').read()
         cherrypy.response.headers['Content-Type'] = "application/pdf"
         cherrypy.response.headers['Content-Length'] = len(stream)
         cherrypy.response.headers['Expires'] = 0

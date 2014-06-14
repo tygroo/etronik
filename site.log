@@ -17855,3 +17855,60 @@ ChannelFailures: IOError("Port 8080 not free on '127.0.0.1'",)
 [14/Jun/2014:01:18:31] ENGINE Bus STOPPED
 [14/Jun/2014:01:18:31] ENGINE Bus EXITING
 [14/Jun/2014:01:18:31] ENGINE Bus EXITED
+[14/Jun/2014:09:21:16] ENGINE Listening for SIGHUP.
+[14/Jun/2014:09:21:16] ENGINE Listening for SIGTERM.
+[14/Jun/2014:09:21:16] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:09:21:16] ENGINE Bus STARTING
+[14/Jun/2014:09:21:17] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:09:21:17] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:09:21:20] ENGINE Bus STOPPING
+[14/Jun/2014:09:21:20] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) already shut down
+[14/Jun/2014:09:21:20] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:09:21:20] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:09:21:20] ENGINE Bus STOPPED
+[14/Jun/2014:09:21:20] ENGINE Bus EXITING
+[14/Jun/2014:09:21:20] ENGINE Bus EXITED
+[14/Jun/2014:09:21:28] ENGINE Listening for SIGHUP.
+[14/Jun/2014:09:21:28] ENGINE Listening for SIGTERM.
+[14/Jun/2014:09:21:28] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:09:21:28] ENGINE Bus STARTING
+[14/Jun/2014:09:21:28] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:09:21:28] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:09:21:29] ENGINE Serving on 127.0.0.1:8081
+[14/Jun/2014:09:21:29] ENGINE Bus STARTED
+[14/Jun/2014:10:08:10] ENGINE Restarting because /home/bob/etronik/webApp/__init__.py changed.
+[14/Jun/2014:10:08:10] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:10:08:10] ENGINE Bus STOPPING
+[14/Jun/2014:10:08:10] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:10:08:10] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:10:08:10] ENGINE Bus STOPPED
+[14/Jun/2014:10:08:10] ENGINE Bus EXITING
+[14/Jun/2014:10:08:10] ENGINE Bus EXITED
+[14/Jun/2014:10:08:10] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:10:08:10] ENGINE Re-spawning /usr/sbin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:10:08:10] ENGINE Listening for SIGHUP.
+[14/Jun/2014:10:08:10] ENGINE Listening for SIGTERM.
+[14/Jun/2014:10:08:10] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:10:08:10] ENGINE Bus STARTING
+[14/Jun/2014:10:08:10] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:10:08:10] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:10:08:10] ENGINE Serving on 127.0.0.1:8081
+[14/Jun/2014:10:08:10] ENGINE Bus STARTED
+[14/Jun/2014:10:11:17] ENGINE Restarting because /home/bob/etronik/webApp/__init__.py changed.
+[14/Jun/2014:10:11:17] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:10:11:17] ENGINE Bus STOPPING
+[14/Jun/2014:10:11:17] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:10:11:17] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:10:11:17] ENGINE Bus STOPPED
+[14/Jun/2014:10:11:17] ENGINE Bus EXITING
+[14/Jun/2014:10:11:17] ENGINE Bus EXITED
+[14/Jun/2014:10:11:17] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:10:11:17] ENGINE Re-spawning /usr/sbin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:10:11:17] ENGINE Listening for SIGHUP.
+[14/Jun/2014:10:11:17] ENGINE Listening for SIGTERM.
+[14/Jun/2014:10:11:17] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:10:11:17] ENGINE Bus STARTING
+[14/Jun/2014:10:11:17] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:10:11:17] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:10:11:17] ENGINE Serving on 127.0.0.1:8081
+[14/Jun/2014:10:11:17] ENGINE Bus STARTED
