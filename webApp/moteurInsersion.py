@@ -2,8 +2,6 @@ from pymongo import MongoClient
 import pymongo
 client = MongoClient('localhost', 27017)
 
-db = client.epsi
-db.command( { "dropDatabase" : 1 } ) 
 
 db = client.epsi
 

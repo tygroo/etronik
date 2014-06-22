@@ -6,6 +6,7 @@ import cgitb; cgitb.enable()  # for troubleshooting
 import moteur
 import cherrypy
 import json
+import subprocess
 #import execjs
 from pymongo import *
 from cherrypy.lib.static import serve_file
@@ -118,3 +119,42 @@ class Root:
         #contents = toDisplay("contents",moteur.afficher('content',query))
         #return template_index.render(_titres = titres,_auteurs = auteurs,_annees = annees,_contents = contents,
         #    _title = titre, _author= auteur, _annee = annee, _query = query )
+
+    @cherrypy.expose
+    def upload(self, myFile=None):
+        out = """<html>
+        <body>
+        myFile length: %s<br />
+        myFile filename: %s<br />
+        myFile mime-type: %s
+        </body>
+        </html>"""
+
+
+        direction = 'webApp/'
+        size = 0
+        allData=''
+        while True:
+                data = myFile.file.read(8192)
+                allData+=data
+                if not data:
+                        break
+                size += len(data)
+        savedFile=open(direction+'docs/'+myFile.filename, 'wb')
+        savedFile.write(allData)
+        savedFile.close()
+        file = myFile.filename
+
+        ##############################################
+        #on peut optimiser en cherchant le chemin absolu
+        
+        #traitement.traitementFichier(direction+'docs/'+myFile.filename)
+        #subprocess.call(['python','traitement.py',myFile.filename],cwd = direction);
+        subprocess.call(['python','initialisation_bdd.py'],cwd = direction);
+        #initBase.initByDir(direction+'docs/')
+        ##############################################
+
+        template_index=env.get_template('index.html')
+        return template_index.render()
+
+        

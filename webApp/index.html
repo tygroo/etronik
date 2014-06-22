@@ -13,6 +13,9 @@
 
       <div class="container">
       	<h4>{{_liste}}</h4>
-
+         <form enctype="multipart/form-data" action="/upload" method="POST">
+			<p>File: <input type="file" name="myFile" accept="application/pdf" value="Ajouter un fichier à la base..."></p>
+			<p><input type="submit" value="Envoyer"></p>
+		</form>
 
 {% endblock content %}

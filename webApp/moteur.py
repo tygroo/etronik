@@ -1,5 +1,6 @@
 from pymongo import MongoClient
 import json
+import moteurInsersion
 client = MongoClient('localhost', 27017)
 db = client.epsi
 

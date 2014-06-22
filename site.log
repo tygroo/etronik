@@ -18190,3 +18190,2234 @@ AttributeError: 'Cursor' object has no attribute 'items'
 [14/Jun/2014:11:30:54] ENGINE Started monitor thread '_TimeoutMonitor'.
 [14/Jun/2014:11:30:54] ENGINE Serving on 127.0.0.1:8081
 [14/Jun/2014:11:30:54] ENGINE Bus STARTED
+[14/Jun/2014:12:31:05] ENGINE Listening for SIGHUP.
+[14/Jun/2014:12:31:05] ENGINE Listening for SIGTERM.
+[14/Jun/2014:12:31:05] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:12:31:05] ENGINE Bus STARTING
+[14/Jun/2014:12:31:05] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:12:31:05] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:12:31:05] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:12:31:05] ENGINE Bus STARTED
+[14/Jun/2014:12:31:43] HTTP 
+Request Headers:
+  Content-Length: 45
+  REFERER: http://localhost:8081/
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  COOKIE: session_id=ab4b16c97ce614f406963c1569a63baefef4af28
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[14/Jun/2014:12:31:43] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 71, in response
+    titres = moteur.chercheDansIndex1(titre)
+  File "webApp/moteur.py", line 20, in chercheDansIndex1
+    for item in result:
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 1038, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 982, in _refresh
+    self.__uuid_subtype))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 925, in __send_message
+    self.__compile_re)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/helpers.py", line 109, in _unpack_response
+    error_object)
+OperationFailure: database error: Unable to execute query: error processing query: ns=epsi.index1 limit=0 skip=0
+Tree: TEXT : query=noiraud, language=fr, tag=NULL
+Sort: {}
+Proj: { _id: 0, titre: 1 }
+ planner returned error: need exactly one text index for $text query
+
+[14/Jun/2014:12:33:02] ENGINE Keyboard Interrupt: shutting down bus
+[14/Jun/2014:12:33:02] ENGINE Bus STOPPING
+[14/Jun/2014:12:33:02] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:12:33:02] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:12:33:02] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:12:33:02] ENGINE Bus STOPPED
+[14/Jun/2014:12:33:02] ENGINE Bus EXITING
+[14/Jun/2014:12:33:02] ENGINE Bus EXITED
+[14/Jun/2014:12:33:02] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:14:40:08] ENGINE Listening for SIGHUP.
+[14/Jun/2014:14:40:08] ENGINE Listening for SIGTERM.
+[14/Jun/2014:14:40:08] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:14:40:08] ENGINE Bus STARTING
+[14/Jun/2014:14:40:08] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:14:40:08] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:14:40:09] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:14:40:09] ENGINE Bus STARTED
+[14/Jun/2014:14:40:28] HTTP 
+Request Headers:
+  Content-Length: 45
+  REFERER: http://localhost:8081/
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  COOKIE: session_id=ffb544a04bea0f26afc02089ba6c1c599035c0f5
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[14/Jun/2014:14:40:28] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 71, in response
+    titres = moteur.chercheDansIndex1(titre)
+  File "webApp/moteur.py", line 20, in chercheDansIndex1
+    for item in result:
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 1038, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 982, in _refresh
+    self.__uuid_subtype))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 925, in __send_message
+    self.__compile_re)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/helpers.py", line 109, in _unpack_response
+    error_object)
+OperationFailure: database error: Unable to execute query: error processing query: ns=epsi.index1 limit=0 skip=0
+Tree: TEXT : query=, language=fr, tag=NULL
+Sort: {}
+Proj: { _id: 0, titre: 1 }
+ planner returned error: need exactly one text index for $text query
+
+[14/Jun/2014:14:41:18] ENGINE Keyboard Interrupt: shutting down bus
+[14/Jun/2014:14:41:18] ENGINE Bus STOPPING
+[14/Jun/2014:14:41:18] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:14:41:18] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:14:41:18] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:14:41:18] ENGINE Bus STOPPED
+[14/Jun/2014:14:41:18] ENGINE Bus EXITING
+[14/Jun/2014:14:41:18] ENGINE Bus EXITED
+[14/Jun/2014:14:41:18] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:14:43:28] ENGINE Listening for SIGHUP.
+[14/Jun/2014:14:43:28] ENGINE Listening for SIGTERM.
+[14/Jun/2014:14:43:28] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:14:43:28] ENGINE Bus STARTING
+[14/Jun/2014:14:43:28] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:14:43:28] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:14:43:28] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:14:43:28] ENGINE Bus STARTED
+[14/Jun/2014:14:51:20] ENGINE Keyboard Interrupt: shutting down bus
+[14/Jun/2014:14:51:20] ENGINE Bus STOPPING
+[14/Jun/2014:14:51:20] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:14:51:20] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:14:51:20] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:14:51:20] ENGINE Bus STOPPED
+[14/Jun/2014:14:51:20] ENGINE Bus EXITING
+[14/Jun/2014:14:51:20] ENGINE Bus EXITED
+[14/Jun/2014:14:51:20] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:14:51:22] ENGINE Listening for SIGHUP.
+[14/Jun/2014:14:51:22] ENGINE Listening for SIGTERM.
+[14/Jun/2014:14:51:22] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:14:51:22] ENGINE Bus STARTING
+[14/Jun/2014:14:51:22] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:14:51:22] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:14:51:22] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:14:51:22] ENGINE Bus STARTED
+[14/Jun/2014:15:00:56] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[14/Jun/2014:15:00:56] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:15:00:56] ENGINE Bus STOPPING
+[14/Jun/2014:15:00:56] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:15:00:56] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:15:00:56] ENGINE Bus STOPPED
+[14/Jun/2014:15:00:56] ENGINE Bus EXITING
+[14/Jun/2014:15:00:56] ENGINE Bus EXITED
+[14/Jun/2014:15:00:56] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:15:00:56] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:15:00:57] ENGINE Listening for SIGHUP.
+[14/Jun/2014:15:00:57] ENGINE Listening for SIGTERM.
+[14/Jun/2014:15:00:57] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:15:00:57] ENGINE Bus STARTING
+[14/Jun/2014:15:00:57] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:15:00:57] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:15:00:57] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:15:00:57] ENGINE Bus STARTED
+[14/Jun/2014:15:17:31] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[14/Jun/2014:15:17:31] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:15:17:31] ENGINE Bus STOPPING
+[14/Jun/2014:15:17:31] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:15:17:31] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:15:17:31] ENGINE Bus STOPPED
+[14/Jun/2014:15:17:31] ENGINE Bus EXITING
+[14/Jun/2014:15:17:31] ENGINE Bus EXITED
+[14/Jun/2014:15:17:31] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:15:17:31] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:15:17:31] ENGINE Listening for SIGHUP.
+[14/Jun/2014:15:17:31] ENGINE Listening for SIGTERM.
+[14/Jun/2014:15:17:31] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:15:17:31] ENGINE Bus STARTING
+[14/Jun/2014:15:17:31] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:15:17:31] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:15:17:31] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:15:17:31] ENGINE Bus STARTED
+[14/Jun/2014:15:17:53] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[14/Jun/2014:15:17:53] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:15:17:53] ENGINE Bus STOPPING
+[14/Jun/2014:15:17:53] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:15:17:53] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:15:17:53] ENGINE Bus STOPPED
+[14/Jun/2014:15:17:53] ENGINE Bus EXITING
+[14/Jun/2014:15:17:53] ENGINE Bus EXITED
+[14/Jun/2014:15:17:53] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:15:17:53] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:15:17:53] ENGINE Listening for SIGHUP.
+[14/Jun/2014:15:17:53] ENGINE Listening for SIGTERM.
+[14/Jun/2014:15:17:53] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:15:17:53] ENGINE Bus STARTING
+[14/Jun/2014:15:17:53] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:15:17:53] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:15:17:54] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:15:17:54] ENGINE Bus STARTED
+[14/Jun/2014:15:18:11] HTTP 
+Request Headers:
+  Content-Length: 1953513
+  REFERER: http://localhost:8081/base
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  COOKIE: session_id=f6999a28745d8cb47023943cbad83d0e98f7cef1
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: multipart/form-data; boundary=----WebKitFormBoundarymZ5lBALI7Vzm4TmO
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[14/Jun/2014:15:18:11] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 138, in upload
+    formFields = myFieldStorage(fp=cherrypy.request.rfile,headers=lcHDRS,environ={'REQUEST_METHOD':'POST'},keep_blank_values=True)
+NameError: global name 'myFieldStorage' is not defined
+
+[14/Jun/2014:15:27:23] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[14/Jun/2014:15:27:23] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:15:27:23] ENGINE Bus STOPPING
+[14/Jun/2014:15:27:23] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:15:27:23] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:15:27:23] ENGINE Bus STOPPED
+[14/Jun/2014:15:27:23] ENGINE Bus EXITING
+[14/Jun/2014:15:27:23] ENGINE Bus EXITED
+[14/Jun/2014:15:27:23] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:15:27:23] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:15:27:23] ENGINE Listening for SIGHUP.
+[14/Jun/2014:15:27:23] ENGINE Listening for SIGTERM.
+[14/Jun/2014:15:27:23] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:15:27:23] ENGINE Bus STARTING
+[14/Jun/2014:15:27:23] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:15:27:23] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:15:27:23] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:15:27:23] ENGINE Bus STARTED
+[14/Jun/2014:15:27:50] HTTP 
+Request Headers:
+  Content-Length: 1953513
+  REFERER: http://localhost:8081/base
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  COOKIE: session_id=44f22c096ad3fdb745a7e82c60c0392a3e4a4cf0
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryGFp6txRWJlEuXhl1
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[14/Jun/2014:15:27:50] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 129, in upload
+    file_data = form_data[file].value
+  File "/usr/lib/python2.7/cgi.py", line 540, in __getitem__
+    raise KeyError, key
+KeyError: <cherrypy._cpreqbody.Part object at 0x7fa2f0d2d410>
+
+[14/Jun/2014:15:30:17] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[14/Jun/2014:15:30:17] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:15:30:17] ENGINE Bus STOPPING
+[14/Jun/2014:15:30:17] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:15:30:17] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:15:30:17] ENGINE Bus STOPPED
+[14/Jun/2014:15:30:17] ENGINE Bus EXITING
+[14/Jun/2014:15:30:17] ENGINE Bus EXITED
+[14/Jun/2014:15:30:17] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:15:30:17] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:15:30:17] ENGINE Listening for SIGHUP.
+[14/Jun/2014:15:30:17] ENGINE Listening for SIGTERM.
+[14/Jun/2014:15:30:17] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:15:30:17] ENGINE Bus STARTING
+[14/Jun/2014:15:30:17] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:15:30:17] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:15:30:17] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:15:30:17] ENGINE Bus STARTED
+[14/Jun/2014:15:30:27] HTTP 
+Request Headers:
+  Content-Length: 1953513
+  REFERER: http://localhost:8081/base
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  COOKIE: session_id=204e5aacdc8a7e198f43ea731f3db815a6391e43
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: multipart/form-data; boundary=----WebKitFormBoundarylxP3pNURA1GYKOPh
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[14/Jun/2014:15:30:27] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 129, in upload
+    file_data = form_data[file].value
+  File "/usr/lib/python2.7/cgi.py", line 540, in __getitem__
+    raise KeyError, key
+KeyError: <cherrypy._cpreqbody.Part object at 0x7f4f415099d0>
+
+[14/Jun/2014:15:34:34] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[14/Jun/2014:15:34:34] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:15:34:34] ENGINE Bus STOPPING
+[14/Jun/2014:15:34:34] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:15:34:34] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:15:34:34] ENGINE Bus STOPPED
+[14/Jun/2014:15:34:34] ENGINE Bus EXITING
+[14/Jun/2014:15:34:34] ENGINE Bus EXITED
+[14/Jun/2014:15:34:34] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:15:34:34] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:15:34:34] ENGINE Listening for SIGHUP.
+[14/Jun/2014:15:34:34] ENGINE Listening for SIGTERM.
+[14/Jun/2014:15:34:34] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:15:34:34] ENGINE Bus STARTING
+[14/Jun/2014:15:34:34] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:15:34:34] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:15:34:34] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:15:34:34] ENGINE Bus STARTED
+[14/Jun/2014:22:11:17] ENGINE Caught signal SIGHUP.
+[14/Jun/2014:22:11:17] ENGINE SIGHUP caught while daemonized. Restarting.
+[14/Jun/2014:22:11:17] ENGINE Bus STOPPING
+[14/Jun/2014:22:11:17] ENGINE Caught signal SIGHUP.
+[14/Jun/2014:22:11:17] ENGINE SIGHUP caught while daemonized. Restarting.
+[14/Jun/2014:22:11:17] ENGINE Bus STOPPING
+[14/Jun/2014:22:11:17] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) already shut down
+[14/Jun/2014:22:11:17] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:22:11:17] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:22:11:17] ENGINE Bus STOPPED
+[14/Jun/2014:22:11:17] ENGINE Bus EXITING
+[14/Jun/2014:22:11:17] ENGINE Bus EXITED
+[14/Jun/2014:22:11:17] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:22:11:17] ENGINE No thread running for None.
+[14/Jun/2014:22:11:17] ENGINE No thread running for None.
+[14/Jun/2014:22:11:17] ENGINE Bus STOPPED
+[14/Jun/2014:22:11:17] ENGINE Bus EXITING
+[14/Jun/2014:22:11:17] ENGINE Bus EXITED
+[14/Jun/2014:22:11:17] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:22:11:17] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:22:11:18] ENGINE Listening for SIGHUP.
+[14/Jun/2014:22:11:18] ENGINE Listening for SIGTERM.
+[14/Jun/2014:22:11:18] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:22:11:18] ENGINE Bus STARTING
+[14/Jun/2014:22:11:18] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:22:11:18] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:22:11:18] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:22:11:18] ENGINE Bus STARTED
+[14/Jun/2014:22:21:19] HTTP 
+Request Headers:
+  Content-Length: 1953513
+  REFERER: http://localhost:8081/base
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: multipart/form-data; boundary=----WebKitFormBoundary9lMBly2aLIw7gQiF
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[14/Jun/2014:22:21:19] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 131, in upload
+    fp =open(file,'wb')
+TypeError: coercing to Unicode: need string or buffer, Part found
+
+[14/Jun/2014:22:24:53] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[14/Jun/2014:22:24:53] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:22:24:53] ENGINE Bus STOPPING
+[14/Jun/2014:22:24:53] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:22:24:53] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:22:24:53] ENGINE Bus STOPPED
+[14/Jun/2014:22:24:53] ENGINE Bus EXITING
+[14/Jun/2014:22:24:53] ENGINE Bus EXITED
+[14/Jun/2014:22:24:53] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:22:24:53] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:22:24:53] ENGINE Listening for SIGHUP.
+[14/Jun/2014:22:24:53] ENGINE Listening for SIGTERM.
+[14/Jun/2014:22:24:53] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:22:24:53] ENGINE Bus STARTING
+[14/Jun/2014:22:24:53] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:22:24:53] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:22:24:53] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:22:24:53] ENGINE Bus STARTED
+[14/Jun/2014:22:25:08] HTTP 
+Request Headers:
+  Content-Length: 1953515
+  REFERER: http://localhost:8081/base
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  COOKIE: session_id=2541ba552e7169d53bc1b42926f12747b39382c9
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryA4KfiY85xEA6AxAA
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[14/Jun/2014:22:25:08] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 134, in upload
+    logging.info('myfile: ' + str(myFile))
+NameError: global name 'logging' is not defined
+
+[14/Jun/2014:22:25:57] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[14/Jun/2014:22:25:57] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:22:25:57] ENGINE Bus STOPPING
+[14/Jun/2014:22:25:57] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:22:25:57] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:22:25:57] ENGINE Bus STOPPED
+[14/Jun/2014:22:25:57] ENGINE Bus EXITING
+[14/Jun/2014:22:25:57] ENGINE Bus EXITED
+[14/Jun/2014:22:25:57] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:22:25:57] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:22:25:57] ENGINE Listening for SIGHUP.
+[14/Jun/2014:22:25:57] ENGINE Listening for SIGTERM.
+[14/Jun/2014:22:25:57] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:22:25:57] ENGINE Bus STARTING
+[14/Jun/2014:22:25:57] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:22:25:57] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:22:25:57] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:22:25:57] ENGINE Bus STARTED
+[14/Jun/2014:22:39:55] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[14/Jun/2014:22:39:55] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:22:39:55] ENGINE Bus STOPPING
+[14/Jun/2014:22:39:55] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:22:39:55] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:22:39:55] ENGINE Bus STOPPED
+[14/Jun/2014:22:39:55] ENGINE Bus EXITING
+[14/Jun/2014:22:39:55] ENGINE Bus EXITED
+[14/Jun/2014:22:39:55] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:22:39:55] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:22:39:55] ENGINE Listening for SIGHUP.
+[14/Jun/2014:22:39:55] ENGINE Listening for SIGTERM.
+[14/Jun/2014:22:39:55] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:22:39:55] ENGINE Bus STARTING
+[14/Jun/2014:22:39:55] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:22:39:55] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:22:39:55] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:22:39:55] ENGINE Bus STARTED
+[14/Jun/2014:22:42:29] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/moteur.py changed.
+[14/Jun/2014:22:42:29] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:22:42:29] ENGINE Bus STOPPING
+[14/Jun/2014:22:42:29] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:22:42:29] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:22:42:29] ENGINE Bus STOPPED
+[14/Jun/2014:22:42:29] ENGINE Bus EXITING
+[14/Jun/2014:22:42:29] ENGINE Bus EXITED
+[14/Jun/2014:22:42:29] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:22:42:29] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:22:42:29] ENGINE Listening for SIGHUP.
+[14/Jun/2014:22:42:29] ENGINE Listening for SIGTERM.
+[14/Jun/2014:22:42:29] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:22:42:29] ENGINE Bus STARTING
+[14/Jun/2014:22:42:29] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:22:42:29] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:22:42:30] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:22:42:30] ENGINE Bus STARTED
+[14/Jun/2014:22:43:23] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[14/Jun/2014:22:43:23] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:22:43:23] ENGINE Bus STOPPING
+[14/Jun/2014:22:43:23] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:22:43:23] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:22:43:23] ENGINE Bus STOPPED
+[14/Jun/2014:22:43:23] ENGINE Bus EXITING
+[14/Jun/2014:22:43:23] ENGINE Bus EXITED
+[14/Jun/2014:22:43:23] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:22:43:23] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:22:43:23] ENGINE Listening for SIGHUP.
+[14/Jun/2014:22:43:23] ENGINE Listening for SIGTERM.
+[14/Jun/2014:22:43:23] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:22:43:23] ENGINE Bus STARTING
+[14/Jun/2014:22:43:23] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:22:43:23] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:22:43:23] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:22:43:23] ENGINE Bus STARTED
+[14/Jun/2014:22:44:32] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[14/Jun/2014:22:44:32] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:22:44:32] ENGINE Bus STOPPING
+[14/Jun/2014:22:44:32] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:22:44:32] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:22:44:32] ENGINE Bus STOPPED
+[14/Jun/2014:22:44:32] ENGINE Bus EXITING
+[14/Jun/2014:22:44:32] ENGINE Bus EXITED
+[14/Jun/2014:22:44:32] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:22:44:32] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:22:44:33] ENGINE Listening for SIGHUP.
+[14/Jun/2014:22:44:33] ENGINE Listening for SIGTERM.
+[14/Jun/2014:22:44:33] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:22:44:33] ENGINE Bus STARTING
+[14/Jun/2014:22:44:33] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:22:44:33] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:22:44:33] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:22:44:33] ENGINE Bus STARTED
+[14/Jun/2014:22:44:49] HTTP 
+Request Headers:
+  Content-Length: 1953515
+  REFERER: http://localhost:8081/base
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  COOKIE: session_id=d2d0134c32abaa52697c53809997902701f88f33
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: multipart/form-data; boundary=----WebKitFormBoundarygdARbWaJ6w1q0mnJ
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[14/Jun/2014:22:44:49] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 143, in upload
+    moteurInsersion()
+TypeError: 'module' object is not callable
+
+[14/Jun/2014:22:46:10] HTTP 
+Request Headers:
+  Content-Length: 1953515
+  REFERER: http://localhost:8081/base
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  COOKIE: session_id=801ce8d7ead4dd0edccb506ceb0925e36d6672dd
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryh1noJiQIXc6ROw93
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[14/Jun/2014:22:46:10] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 143, in upload
+    moteurInsersion()
+TypeError: 'module' object is not callable
+
+[14/Jun/2014:22:47:50] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/moteurInsersion.py changed.
+[14/Jun/2014:22:47:50] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:22:47:50] ENGINE Bus STOPPING
+[14/Jun/2014:22:47:50] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:22:47:50] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:22:47:50] ENGINE Bus STOPPED
+[14/Jun/2014:22:47:50] ENGINE Bus EXITING
+[14/Jun/2014:22:47:50] ENGINE Bus EXITED
+[14/Jun/2014:22:47:50] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:22:47:50] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:22:47:50] ENGINE Listening for SIGHUP.
+[14/Jun/2014:22:47:50] ENGINE Listening for SIGTERM.
+[14/Jun/2014:22:47:50] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:22:47:50] ENGINE Bus STARTING
+[14/Jun/2014:22:47:50] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:22:47:50] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:22:47:50] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:22:47:50] ENGINE Bus STARTED
+[14/Jun/2014:22:51:27] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[14/Jun/2014:22:51:27] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:22:51:27] ENGINE Bus STOPPING
+[14/Jun/2014:22:51:27] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:22:51:27] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:22:51:27] ENGINE Bus STOPPED
+[14/Jun/2014:22:51:27] ENGINE Bus EXITING
+[14/Jun/2014:22:51:27] ENGINE Bus EXITED
+[14/Jun/2014:22:51:27] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:22:51:27] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:22:51:27] ENGINE Listening for SIGHUP.
+[14/Jun/2014:22:51:27] ENGINE Listening for SIGTERM.
+[14/Jun/2014:22:51:27] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:22:51:27] ENGINE Bus STARTING
+[14/Jun/2014:22:51:27] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:22:51:27] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:22:51:27] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:22:51:27] ENGINE Bus STARTED
+[14/Jun/2014:22:51:59] HTTP 
+Request Headers:
+  Content-Length: 1953515
+  REFERER: http://localhost:8081/base
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  COOKIE: session_id=21708598c1ab78a0ec192af022f21d8e1eb4d04e
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryAo4pTbRfOUNlB9B3
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[14/Jun/2014:22:51:59] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 143, in upload
+    subprocess.call(['python','initialisation_bdd.py']);
+NameError: global name 'subprocess' is not defined
+
+[14/Jun/2014:22:52:24] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[14/Jun/2014:22:52:24] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:22:52:24] ENGINE Bus STOPPING
+[14/Jun/2014:22:52:24] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:22:52:24] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:22:52:24] ENGINE Bus STOPPED
+[14/Jun/2014:22:52:24] ENGINE Bus EXITING
+[14/Jun/2014:22:52:24] ENGINE Bus EXITED
+[14/Jun/2014:22:52:24] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:22:52:24] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:22:52:24] ENGINE Listening for SIGHUP.
+[14/Jun/2014:22:52:24] ENGINE Listening for SIGTERM.
+[14/Jun/2014:22:52:24] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:22:52:24] ENGINE Bus STARTING
+[14/Jun/2014:22:52:24] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:22:52:24] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:22:52:24] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:22:52:24] ENGINE Bus STARTED
+[14/Jun/2014:23:04:24] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[14/Jun/2014:23:04:24] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:23:04:24] ENGINE Bus STOPPING
+[14/Jun/2014:23:04:24] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:23:04:24] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:23:04:24] ENGINE Bus STOPPED
+[14/Jun/2014:23:04:24] ENGINE Bus EXITING
+[14/Jun/2014:23:04:24] ENGINE Bus EXITED
+[14/Jun/2014:23:04:24] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:23:04:24] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:23:19:50] ENGINE Listening for SIGHUP.
+[14/Jun/2014:23:19:50] ENGINE Listening for SIGTERM.
+[14/Jun/2014:23:19:50] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:23:19:50] ENGINE Bus STARTING
+[14/Jun/2014:23:19:50] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:23:19:50] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:23:19:50] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:23:19:50] ENGINE Bus STARTED
+[14/Jun/2014:23:20:09] HTTP 
+Request Headers:
+  Content-Length: 237906
+  REFERER: http://localhost:8081/base
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  COOKIE: session_id=973e4f50335a193e56634ffd599f8c7c4e0bee9e
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryh1EpjsTJwKvx3kfJ
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[14/Jun/2014:23:20:09] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 145, in upload
+    traitement.traitementFichier(myFile.filename)
+  File "webApp/traitement.py", line 16, in traitementFichier
+    fichier = open("index1", "r")
+IOError: [Errno 2] No such file or directory: 'index1'
+
+[14/Jun/2014:23:20:18] ENGINE Keyboard Interrupt: shutting down bus
+[14/Jun/2014:23:20:18] ENGINE Bus STOPPING
+[14/Jun/2014:23:20:19] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:23:20:19] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:23:20:19] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:23:20:19] ENGINE Bus STOPPED
+[14/Jun/2014:23:20:19] ENGINE Bus EXITING
+[14/Jun/2014:23:20:19] ENGINE Bus EXITED
+[14/Jun/2014:23:20:19] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:23:22:09] ENGINE Listening for SIGHUP.
+[14/Jun/2014:23:22:09] ENGINE Listening for SIGTERM.
+[14/Jun/2014:23:22:09] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:23:22:09] ENGINE Bus STARTING
+[14/Jun/2014:23:22:09] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:23:22:09] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:23:22:09] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:23:22:09] ENGINE Bus STARTED
+[14/Jun/2014:23:22:29] HTTP 
+Request Headers:
+  Content-Length: 189777
+  REFERER: http://localhost:8081/base
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  COOKIE: session_id=c3ded3d39e5d83b8d7b0e9d10209b6c7eb284840
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: multipart/form-data; boundary=----WebKitFormBoundary6PTKAqhWbPqgJuuA
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[14/Jun/2014:23:22:29] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 145, in upload
+    traitement.traitementFichier(myFile.filename)
+  File "webApp/traitement.py", line 16, in traitementFichier
+    fichier = open("index1", "r")
+IOError: [Errno 2] No such file or directory: 'index1'
+
+[14/Jun/2014:23:31:05] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/traitement.py changed.
+[14/Jun/2014:23:31:05] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:23:31:05] ENGINE Bus STOPPING
+[14/Jun/2014:23:31:05] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:23:31:05] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:23:31:05] ENGINE Bus STOPPED
+[14/Jun/2014:23:31:05] ENGINE Bus EXITING
+[14/Jun/2014:23:31:05] ENGINE Bus EXITED
+[14/Jun/2014:23:31:05] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:23:31:05] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:23:31:05] ENGINE Listening for SIGHUP.
+[14/Jun/2014:23:31:05] ENGINE Listening for SIGTERM.
+[14/Jun/2014:23:31:05] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:23:31:05] ENGINE Bus STARTING
+[14/Jun/2014:23:31:05] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:23:31:05] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:23:31:05] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:23:31:05] ENGINE Bus STARTED
+[14/Jun/2014:23:31:29] HTTP 
+Request Headers:
+  Content-Length: 1953515
+  REFERER: http://localhost:8081/base
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  COOKIE: session_id=a34657c2602c5afe4953f958c39669c4beb8ee09
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: multipart/form-data; boundary=----WebKitFormBoundary1rkaAw4J5P7nsRUS
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[14/Jun/2014:23:31:29] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 145, in upload
+    traitement.traitementFichier(myFile.filename)
+  File "webApp/traitement.py", line 15, in traitementFichier
+    fichier = open("index1", "r")
+IOError: [Errno 2] No such file or directory: 'index1'
+
+[14/Jun/2014:23:38:50] HTTP 
+Request Headers:
+  Content-Length: 237906
+  REFERER: http://localhost:8081/base
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  COOKIE: session_id=1f4b7c9dfa1f32c3b57055a55c4f50fdb23de503
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryXku3xTGQrHP5WPvR
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[14/Jun/2014:23:38:50] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 145, in upload
+    traitement.traitementFichier(myFile.filename)
+  File "webApp/traitement.py", line 15, in traitementFichier
+    fichier = open("index1", "r")
+IOError: [Errno 2] No such file or directory: 'index1'
+
+[14/Jun/2014:23:43:58] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[14/Jun/2014:23:43:58] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:23:43:58] ENGINE Bus STOPPING
+[14/Jun/2014:23:43:58] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:23:43:58] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:23:43:58] ENGINE Bus STOPPED
+[14/Jun/2014:23:43:58] ENGINE Bus EXITING
+[14/Jun/2014:23:43:58] ENGINE Bus EXITED
+[14/Jun/2014:23:43:58] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:23:43:58] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:23:43:59] ENGINE Listening for SIGHUP.
+[14/Jun/2014:23:43:59] ENGINE Listening for SIGTERM.
+[14/Jun/2014:23:43:59] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:23:43:59] ENGINE Bus STARTING
+[14/Jun/2014:23:43:59] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:23:43:59] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:23:43:59] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:23:43:59] ENGINE Bus STARTED
+[14/Jun/2014:23:46:35] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[14/Jun/2014:23:46:35] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:23:46:35] ENGINE Bus STOPPING
+[14/Jun/2014:23:46:35] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:23:46:35] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:23:46:35] ENGINE Bus STOPPED
+[14/Jun/2014:23:46:35] ENGINE Bus EXITING
+[14/Jun/2014:23:46:35] ENGINE Bus EXITED
+[14/Jun/2014:23:46:35] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:23:46:35] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:23:46:35] ENGINE Listening for SIGHUP.
+[14/Jun/2014:23:46:35] ENGINE Listening for SIGTERM.
+[14/Jun/2014:23:46:35] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:23:46:35] ENGINE Bus STARTING
+[14/Jun/2014:23:46:35] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:23:46:35] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:23:46:35] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:23:46:35] ENGINE Bus STARTED
+[14/Jun/2014:23:46:58] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[14/Jun/2014:23:46:58] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:23:46:58] ENGINE Bus STOPPING
+[14/Jun/2014:23:46:58] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:23:46:58] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:23:46:58] ENGINE Bus STOPPED
+[14/Jun/2014:23:46:58] ENGINE Bus EXITING
+[14/Jun/2014:23:46:58] ENGINE Bus EXITED
+[14/Jun/2014:23:46:58] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:23:46:58] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[14/Jun/2014:23:46:58] ENGINE Listening for SIGHUP.
+[14/Jun/2014:23:46:58] ENGINE Listening for SIGTERM.
+[14/Jun/2014:23:46:58] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:23:46:58] ENGINE Bus STARTING
+[14/Jun/2014:23:46:58] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:23:46:58] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:23:46:58] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:23:46:58] ENGINE Bus STARTED
+[14/Jun/2014:23:51:31] ENGINE Keyboard Interrupt: shutting down bus
+[14/Jun/2014:23:51:31] ENGINE Bus STOPPING
+[14/Jun/2014:23:51:31] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:23:51:31] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:23:51:31] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:23:51:31] ENGINE Bus STOPPED
+[14/Jun/2014:23:51:31] ENGINE Bus EXITING
+[14/Jun/2014:23:51:31] ENGINE Bus EXITED
+[14/Jun/2014:23:51:31] ENGINE Waiting for child threads to terminate...
+[14/Jun/2014:23:51:33] ENGINE Listening for SIGHUP.
+[14/Jun/2014:23:51:33] ENGINE Listening for SIGTERM.
+[14/Jun/2014:23:51:33] ENGINE Listening for SIGUSR1.
+[14/Jun/2014:23:51:33] ENGINE Bus STARTING
+[14/Jun/2014:23:51:33] ENGINE Started monitor thread '_TimeoutMonitor'.
+[14/Jun/2014:23:51:33] ENGINE Started monitor thread 'Autoreloader'.
+[14/Jun/2014:23:51:33] ENGINE Serving on http://127.0.0.1:8081
+[14/Jun/2014:23:51:33] ENGINE Bus STARTED
+[14/Jun/2014:23:57:13] ENGINE Keyboard Interrupt: shutting down bus
+[14/Jun/2014:23:57:13] ENGINE Bus STOPPING
+[14/Jun/2014:23:57:13] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[14/Jun/2014:23:57:13] ENGINE Stopped thread 'Autoreloader'.
+[14/Jun/2014:23:57:13] ENGINE Stopped thread '_TimeoutMonitor'.
+[14/Jun/2014:23:57:13] ENGINE Bus STOPPED
+[14/Jun/2014:23:57:13] ENGINE Bus EXITING
+[14/Jun/2014:23:57:13] ENGINE Bus EXITED
+[14/Jun/2014:23:57:13] ENGINE Waiting for child threads to terminate...
+[15/Jun/2014:00:00:04] ENGINE Listening for SIGHUP.
+[15/Jun/2014:00:00:04] ENGINE Listening for SIGTERM.
+[15/Jun/2014:00:00:04] ENGINE Listening for SIGUSR1.
+[15/Jun/2014:00:00:04] ENGINE Bus STARTING
+[15/Jun/2014:00:00:04] ENGINE Started monitor thread '_TimeoutMonitor'.
+[15/Jun/2014:00:00:04] ENGINE Started monitor thread 'Autoreloader'.
+[15/Jun/2014:00:00:04] ENGINE Serving on http://127.0.0.1:8081
+[15/Jun/2014:00:00:04] ENGINE Bus STARTED
+[15/Jun/2014:00:05:08] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[15/Jun/2014:00:05:08] ENGINE Stopped thread 'Autoreloader'.
+[15/Jun/2014:00:05:08] ENGINE Bus STOPPING
+[15/Jun/2014:00:05:08] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[15/Jun/2014:00:05:08] ENGINE Stopped thread '_TimeoutMonitor'.
+[15/Jun/2014:00:05:08] ENGINE Bus STOPPED
+[15/Jun/2014:00:05:08] ENGINE Bus EXITING
+[15/Jun/2014:00:05:08] ENGINE Bus EXITED
+[15/Jun/2014:00:05:08] ENGINE Waiting for child threads to terminate...
+[15/Jun/2014:00:05:08] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[15/Jun/2014:00:05:09] ENGINE Listening for SIGHUP.
+[15/Jun/2014:00:05:09] ENGINE Listening for SIGTERM.
+[15/Jun/2014:00:05:09] ENGINE Listening for SIGUSR1.
+[15/Jun/2014:00:05:09] ENGINE Bus STARTING
+[15/Jun/2014:00:05:09] ENGINE Started monitor thread '_TimeoutMonitor'.
+[15/Jun/2014:00:05:09] ENGINE Started monitor thread 'Autoreloader'.
+[15/Jun/2014:00:05:09] ENGINE Serving on http://127.0.0.1:8081
+[15/Jun/2014:00:05:09] ENGINE Bus STARTED
+[15/Jun/2014:00:07:25] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/moteurInsersion.py changed.
+[15/Jun/2014:00:07:25] ENGINE Stopped thread 'Autoreloader'.
+[15/Jun/2014:00:07:25] ENGINE Bus STOPPING
+[15/Jun/2014:00:07:25] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[15/Jun/2014:00:07:25] ENGINE Stopped thread '_TimeoutMonitor'.
+[15/Jun/2014:00:07:25] ENGINE Bus STOPPED
+[15/Jun/2014:00:07:25] ENGINE Bus EXITING
+[15/Jun/2014:00:07:25] ENGINE Bus EXITED
+[15/Jun/2014:00:07:25] ENGINE Waiting for child threads to terminate...
+[15/Jun/2014:00:07:25] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[15/Jun/2014:00:07:26] ENGINE Listening for SIGHUP.
+[15/Jun/2014:00:07:26] ENGINE Listening for SIGTERM.
+[15/Jun/2014:00:07:26] ENGINE Listening for SIGUSR1.
+[15/Jun/2014:00:07:26] ENGINE Bus STARTING
+[15/Jun/2014:00:07:26] ENGINE Started monitor thread '_TimeoutMonitor'.
+[15/Jun/2014:00:07:26] ENGINE Started monitor thread 'Autoreloader'.
+[15/Jun/2014:00:07:26] ENGINE Serving on http://127.0.0.1:8081
+[15/Jun/2014:00:07:26] ENGINE Bus STARTED
+[15/Jun/2014:01:16:15] ENGINE Caught signal SIGHUP.
+[15/Jun/2014:01:16:15] ENGINE SIGHUP caught while daemonized. Restarting.
+[15/Jun/2014:01:16:15] ENGINE Bus STOPPING
+[15/Jun/2014:01:16:15] ENGINE Caught signal SIGHUP.
+[15/Jun/2014:01:16:15] ENGINE SIGHUP caught while daemonized. Restarting.
+[15/Jun/2014:01:16:15] ENGINE Bus STOPPING
+[15/Jun/2014:01:16:15] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) already shut down
+[15/Jun/2014:01:16:15] ENGINE Stopped thread 'Autoreloader'.
+[15/Jun/2014:01:16:15] ENGINE Stopped thread '_TimeoutMonitor'.
+[15/Jun/2014:01:16:15] ENGINE Bus STOPPED
+[15/Jun/2014:01:16:15] ENGINE Bus EXITING
+[15/Jun/2014:01:16:15] ENGINE Bus EXITED
+[15/Jun/2014:01:16:15] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[15/Jun/2014:01:16:15] ENGINE No thread running for None.
+[15/Jun/2014:01:16:15] ENGINE No thread running for None.
+[15/Jun/2014:01:16:15] ENGINE Bus STOPPED
+[15/Jun/2014:01:16:15] ENGINE Bus EXITING
+[15/Jun/2014:01:16:15] ENGINE Bus EXITED
+[15/Jun/2014:01:16:15] ENGINE Waiting for child threads to terminate...
+[15/Jun/2014:01:16:15] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[15/Jun/2014:01:16:16] ENGINE Listening for SIGHUP.
+[15/Jun/2014:01:16:16] ENGINE Listening for SIGTERM.
+[15/Jun/2014:01:16:16] ENGINE Listening for SIGUSR1.
+[15/Jun/2014:01:16:16] ENGINE Bus STARTING
+[15/Jun/2014:01:16:16] ENGINE Started monitor thread '_TimeoutMonitor'.
+[15/Jun/2014:01:16:16] ENGINE Started monitor thread 'Autoreloader'.
+[15/Jun/2014:01:16:16] ENGINE Serving on http://127.0.0.1:8081
+[15/Jun/2014:01:16:16] ENGINE Bus STARTED
+[15/Jun/2014:03:20:05] ENGINE Caught signal SIGTERM.
+[15/Jun/2014:03:20:05] ENGINE Bus STOPPING
+[15/Jun/2014:03:20:05] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[15/Jun/2014:03:20:05] ENGINE Stopped thread 'Autoreloader'.
+[15/Jun/2014:03:20:05] ENGINE Stopped thread '_TimeoutMonitor'.
+[15/Jun/2014:03:20:05] ENGINE Bus STOPPED
+[15/Jun/2014:03:20:05] ENGINE Bus EXITING
+[15/Jun/2014:03:20:05] ENGINE Bus EXITED
+[15/Jun/2014:03:20:05] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:10:10:21] ENGINE Listening for SIGHUP.
+[22/Jun/2014:10:10:21] ENGINE Listening for SIGTERM.
+[22/Jun/2014:10:10:21] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:10:10:21] ENGINE Bus STARTING
+[22/Jun/2014:10:10:21] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:10:10:21] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:10:10:21] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x7f85b2272150>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/process/wspbus.py", line 205, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpserver.py", line 160, in start
+    ServerAdapter.start(self)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/process/servers.py", line 177, in start
+    self.wait()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/process/servers.py", line 226, in wait
+    raise self.interrupt
+error: No socket could be created -- (('192.168.0.32', 8086): [Errno 99] Cannot assign requested address)
+
+[22/Jun/2014:10:10:21] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/process/wspbus.py", line 243, in start
+    self.publish('start')
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/process/wspbus.py", line 223, in publish
+    raise exc
+ChannelFailures: error("No socket could be created -- (('192.168.0.32', 8086): [Errno 99] Cannot assign requested address)",)
+
+[22/Jun/2014:10:10:21] ENGINE Bus STOPPING
+[22/Jun/2014:10:10:21] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('192.168.0.32', 8086)) already shut down
+[22/Jun/2014:10:10:21] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:10:10:21] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:10:10:21] ENGINE Error in HTTP server: shutting down
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/process/servers.py", line 205, in _start_http_thread
+    self.httpserver.start()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/wsgiserver/wsgiserver2.py", line 1953, in start
+    raise socket.error(msg)
+error: No socket could be created -- (('192.168.0.32', 8086): [Errno 99] Cannot assign requested address)
+
+[22/Jun/2014:10:10:21] ENGINE Bus STOPPED
+[22/Jun/2014:10:10:21] ENGINE Bus STOPPING
+[22/Jun/2014:10:10:21] ENGINE Bus EXITING
+[22/Jun/2014:10:10:21] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('192.168.0.32', 8086)) already shut down
+[22/Jun/2014:10:10:21] ENGINE Bus EXITED
+[22/Jun/2014:10:10:36] ENGINE Listening for SIGHUP.
+[22/Jun/2014:10:10:36] ENGINE Listening for SIGTERM.
+[22/Jun/2014:10:10:36] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:10:10:36] ENGINE Bus STARTING
+[22/Jun/2014:10:10:36] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:10:10:36] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:10:10:36] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:10:10:36] ENGINE Bus STARTED
+[22/Jun/2014:10:24:01] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:10:24:01] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:10:24:01] ENGINE Bus STOPPING
+[22/Jun/2014:10:24:01] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:10:24:01] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:10:24:01] ENGINE Bus STOPPED
+[22/Jun/2014:10:24:01] ENGINE Bus EXITING
+[22/Jun/2014:10:24:01] ENGINE Bus EXITED
+[22/Jun/2014:10:24:01] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:10:24:01] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:10:24:01] ENGINE Listening for SIGHUP.
+[22/Jun/2014:10:24:01] ENGINE Listening for SIGTERM.
+[22/Jun/2014:10:24:01] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:10:24:01] ENGINE Bus STARTING
+[22/Jun/2014:10:24:01] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:10:24:01] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:10:24:01] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:10:24:01] ENGINE Bus STARTED
+[22/Jun/2014:10:25:34] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:10:25:34] ENGINE Bus STOPPING
+[22/Jun/2014:10:25:34] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:10:25:34] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:10:25:34] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:10:25:34] ENGINE Bus STOPPED
+[22/Jun/2014:10:25:34] ENGINE Bus EXITING
+[22/Jun/2014:10:25:34] ENGINE Bus EXITED
+[22/Jun/2014:10:25:34] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:10:25:37] ENGINE Listening for SIGHUP.
+[22/Jun/2014:10:25:37] ENGINE Listening for SIGTERM.
+[22/Jun/2014:10:25:37] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:10:25:37] ENGINE Bus STARTING
+[22/Jun/2014:10:25:37] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:10:25:37] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:10:25:37] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:10:25:37] ENGINE Bus STARTED
+[22/Jun/2014:10:27:11] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:10:27:11] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:10:27:11] ENGINE Bus STOPPING
+[22/Jun/2014:10:27:11] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:10:27:11] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:10:27:11] ENGINE Bus STOPPED
+[22/Jun/2014:10:27:11] ENGINE Bus EXITING
+[22/Jun/2014:10:27:11] ENGINE Bus EXITED
+[22/Jun/2014:10:27:11] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:10:27:11] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:10:27:11] ENGINE Listening for SIGHUP.
+[22/Jun/2014:10:27:11] ENGINE Listening for SIGTERM.
+[22/Jun/2014:10:27:11] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:10:27:11] ENGINE Bus STARTING
+[22/Jun/2014:10:27:11] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:10:27:11] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:10:27:11] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:10:27:11] ENGINE Bus STARTED
+[22/Jun/2014:10:27:54] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:10:27:54] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:10:27:54] ENGINE Bus STOPPING
+[22/Jun/2014:10:27:54] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:10:27:54] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:10:27:54] ENGINE Bus STOPPED
+[22/Jun/2014:10:27:54] ENGINE Bus EXITING
+[22/Jun/2014:10:27:54] ENGINE Bus EXITED
+[22/Jun/2014:10:27:55] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:10:27:55] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:10:27:55] ENGINE Listening for SIGHUP.
+[22/Jun/2014:10:27:55] ENGINE Listening for SIGTERM.
+[22/Jun/2014:10:27:55] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:10:27:55] ENGINE Bus STARTING
+[22/Jun/2014:10:27:55] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:10:27:55] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:10:27:55] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:10:27:55] ENGINE Bus STARTED
+[22/Jun/2014:10:28:00] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:10:28:00] ENGINE Bus STOPPING
+[22/Jun/2014:10:28:00] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:10:28:00] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:10:28:00] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:10:28:00] ENGINE Bus STOPPED
+[22/Jun/2014:10:28:00] ENGINE Bus EXITING
+[22/Jun/2014:10:28:00] ENGINE Bus EXITED
+[22/Jun/2014:10:28:00] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:10:28:02] ENGINE Listening for SIGHUP.
+[22/Jun/2014:10:28:02] ENGINE Listening for SIGTERM.
+[22/Jun/2014:10:28:02] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:10:28:02] ENGINE Bus STARTING
+[22/Jun/2014:10:28:02] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:10:28:02] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:10:28:02] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:10:28:02] ENGINE Bus STARTED
+[22/Jun/2014:10:31:28] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:10:31:28] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:10:31:28] ENGINE Bus STOPPING
+[22/Jun/2014:10:31:28] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:10:31:28] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:10:31:28] ENGINE Bus STOPPED
+[22/Jun/2014:10:31:28] ENGINE Bus EXITING
+[22/Jun/2014:10:31:28] ENGINE Bus EXITED
+[22/Jun/2014:10:31:28] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:10:31:28] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:10:31:28] ENGINE Listening for SIGHUP.
+[22/Jun/2014:10:31:28] ENGINE Listening for SIGTERM.
+[22/Jun/2014:10:31:28] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:10:31:28] ENGINE Bus STARTING
+[22/Jun/2014:10:31:28] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:10:31:28] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:10:31:28] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:10:31:28] ENGINE Bus STARTED
+[22/Jun/2014:10:33:22] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:10:33:22] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:10:33:22] ENGINE Bus STOPPING
+[22/Jun/2014:10:33:22] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:10:33:22] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:10:33:22] ENGINE Bus STOPPED
+[22/Jun/2014:10:33:22] ENGINE Bus EXITING
+[22/Jun/2014:10:33:22] ENGINE Bus EXITED
+[22/Jun/2014:10:33:22] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:10:33:22] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:10:33:22] ENGINE Listening for SIGHUP.
+[22/Jun/2014:10:33:22] ENGINE Listening for SIGTERM.
+[22/Jun/2014:10:33:22] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:10:33:22] ENGINE Bus STARTING
+[22/Jun/2014:10:33:22] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:10:33:22] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:10:33:22] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:10:33:22] ENGINE Bus STARTED
+[22/Jun/2014:10:33:35] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:10:33:35] ENGINE Bus STOPPING
+[22/Jun/2014:10:33:35] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:10:33:35] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:10:33:35] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:10:33:35] ENGINE Bus STOPPED
+[22/Jun/2014:10:33:35] ENGINE Bus EXITING
+[22/Jun/2014:10:33:35] ENGINE Bus EXITED
+[22/Jun/2014:10:33:35] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:10:33:37] ENGINE Listening for SIGHUP.
+[22/Jun/2014:10:33:37] ENGINE Listening for SIGTERM.
+[22/Jun/2014:10:33:37] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:10:33:37] ENGINE Bus STARTING
+[22/Jun/2014:10:33:37] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:10:33:37] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:10:33:37] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:10:33:37] ENGINE Bus STARTED
+[22/Jun/2014:10:33:39] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:10:33:39] ENGINE Bus STOPPING
+[22/Jun/2014:10:33:39] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:10:33:39] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:10:33:39] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:10:33:39] ENGINE Bus STOPPED
+[22/Jun/2014:10:33:39] ENGINE Bus EXITING
+[22/Jun/2014:10:33:39] ENGINE Bus EXITED
+[22/Jun/2014:10:33:39] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:10:33:47] ENGINE Listening for SIGHUP.
+[22/Jun/2014:10:33:47] ENGINE Listening for SIGTERM.
+[22/Jun/2014:10:33:47] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:10:33:47] ENGINE Bus STARTING
+[22/Jun/2014:10:33:47] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:10:33:47] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:10:33:47] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:10:33:47] ENGINE Bus STARTED
+[22/Jun/2014:10:42:23] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:10:42:23] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:10:42:23] ENGINE Bus STOPPING
+[22/Jun/2014:10:42:23] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:10:42:23] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:10:42:23] ENGINE Bus STOPPED
+[22/Jun/2014:10:42:23] ENGINE Bus EXITING
+[22/Jun/2014:10:42:23] ENGINE Bus EXITED
+[22/Jun/2014:10:42:23] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:10:42:23] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:10:42:23] ENGINE Listening for SIGHUP.
+[22/Jun/2014:10:42:23] ENGINE Listening for SIGTERM.
+[22/Jun/2014:10:42:23] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:10:42:23] ENGINE Bus STARTING
+[22/Jun/2014:10:42:23] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:10:42:23] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:10:42:23] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:10:42:23] ENGINE Bus STARTED
+[22/Jun/2014:10:42:26] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:10:42:26] ENGINE Bus STOPPING
+[22/Jun/2014:10:42:26] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:10:42:26] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:10:42:26] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:10:42:26] ENGINE Bus STOPPED
+[22/Jun/2014:10:42:26] ENGINE Bus EXITING
+[22/Jun/2014:10:42:26] ENGINE Bus EXITED
+[22/Jun/2014:10:42:26] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:10:42:27] ENGINE Listening for SIGHUP.
+[22/Jun/2014:10:42:27] ENGINE Listening for SIGTERM.
+[22/Jun/2014:10:42:27] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:10:42:27] ENGINE Bus STARTING
+[22/Jun/2014:10:42:27] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:10:42:27] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:10:42:27] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:10:42:27] ENGINE Bus STARTED
+[22/Jun/2014:11:15:39] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:11:15:39] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:11:15:39] ENGINE Bus STOPPING
+[22/Jun/2014:11:15:39] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:11:15:39] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:11:15:39] ENGINE Bus STOPPED
+[22/Jun/2014:11:15:39] ENGINE Bus EXITING
+[22/Jun/2014:11:15:39] ENGINE Bus EXITED
+[22/Jun/2014:11:15:39] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:11:15:39] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:11:15:39] ENGINE Listening for SIGHUP.
+[22/Jun/2014:11:15:39] ENGINE Listening for SIGTERM.
+[22/Jun/2014:11:15:39] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:11:15:39] ENGINE Bus STARTING
+[22/Jun/2014:11:15:39] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:11:15:39] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:11:15:39] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:11:15:39] ENGINE Bus STARTED
+[22/Jun/2014:11:17:26] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:11:17:26] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:11:17:26] ENGINE Bus STOPPING
+[22/Jun/2014:11:17:26] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:11:17:26] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:11:17:26] ENGINE Bus STOPPED
+[22/Jun/2014:11:17:26] ENGINE Bus EXITING
+[22/Jun/2014:11:17:26] ENGINE Bus EXITED
+[22/Jun/2014:11:17:26] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:11:17:26] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:11:17:26] ENGINE Listening for SIGHUP.
+[22/Jun/2014:11:17:26] ENGINE Listening for SIGTERM.
+[22/Jun/2014:11:17:26] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:11:17:26] ENGINE Bus STARTING
+[22/Jun/2014:11:17:26] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:11:17:26] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:11:17:26] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:11:17:26] ENGINE Bus STARTED
+[22/Jun/2014:11:17:52] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:11:17:52] ENGINE Bus STOPPING
+[22/Jun/2014:11:17:52] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:11:17:52] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:11:17:52] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:11:17:52] ENGINE Bus STOPPED
+[22/Jun/2014:11:17:52] ENGINE Bus EXITING
+[22/Jun/2014:11:17:52] ENGINE Bus EXITED
+[22/Jun/2014:11:17:52] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:11:17:57] ENGINE Listening for SIGHUP.
+[22/Jun/2014:11:17:57] ENGINE Listening for SIGTERM.
+[22/Jun/2014:11:17:57] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:11:17:57] ENGINE Bus STARTING
+[22/Jun/2014:11:17:57] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:11:17:57] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:11:17:57] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:11:17:57] ENGINE Bus STARTED
+[22/Jun/2014:11:18:22] HTTP 
+Request Headers:
+  Content-Length: 978526
+  REFERER: http://localhost:8081/base
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  COOKIE: session_id=57ad249957e174d725a258eefdc3b3878264f20f
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryzK2BRxiWxa9AaB00
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[22/Jun/2014:11:18:22] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 152, in upload
+    traitement.traitementFichier(file)
+  File "webApp/traitement.py", line 15, in traitementFichier
+    fichier = open("index1", "r")
+IOError: [Errno 2] No such file or directory: 'index1'
+
+[22/Jun/2014:11:20:06] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:11:20:06] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:11:20:06] ENGINE Bus STOPPING
+[22/Jun/2014:11:20:06] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:11:20:06] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:11:20:06] ENGINE Bus STOPPED
+[22/Jun/2014:11:20:06] ENGINE Bus EXITING
+[22/Jun/2014:11:20:06] ENGINE Bus EXITED
+[22/Jun/2014:11:20:06] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:11:20:06] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:11:20:06] ENGINE Listening for SIGHUP.
+[22/Jun/2014:11:20:06] ENGINE Listening for SIGTERM.
+[22/Jun/2014:11:20:06] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:11:20:06] ENGINE Bus STARTING
+[22/Jun/2014:11:20:06] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:11:20:06] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:11:20:06] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:11:20:06] ENGINE Bus STARTED
+[22/Jun/2014:11:20:09] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:11:20:09] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:11:20:09] ENGINE Bus STOPPING
+[22/Jun/2014:11:20:09] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:11:20:09] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:11:20:09] ENGINE Bus STOPPED
+[22/Jun/2014:11:20:09] ENGINE Bus EXITING
+[22/Jun/2014:11:20:09] ENGINE Bus EXITED
+[22/Jun/2014:11:20:09] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:11:20:09] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:11:20:09] ENGINE Listening for SIGHUP.
+[22/Jun/2014:11:20:09] ENGINE Listening for SIGTERM.
+[22/Jun/2014:11:20:09] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:11:20:09] ENGINE Bus STARTING
+[22/Jun/2014:11:20:09] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:11:20:09] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:11:20:09] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:11:20:09] ENGINE Bus STARTED
+[22/Jun/2014:11:20:14] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:11:20:14] ENGINE Bus STOPPING
+[22/Jun/2014:11:20:14] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:11:20:14] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:11:20:14] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:11:20:14] ENGINE Bus STOPPED
+[22/Jun/2014:11:20:14] ENGINE Bus EXITING
+[22/Jun/2014:11:20:14] ENGINE Bus EXITED
+[22/Jun/2014:11:20:14] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:11:20:17] ENGINE Listening for SIGHUP.
+[22/Jun/2014:11:20:17] ENGINE Listening for SIGTERM.
+[22/Jun/2014:11:20:17] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:11:20:17] ENGINE Bus STARTING
+[22/Jun/2014:11:20:17] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:11:20:17] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:11:20:17] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:11:20:17] ENGINE Bus STARTED
+[22/Jun/2014:11:20:27] HTTP 
+Request Headers:
+  Content-Length: 978526
+  REFERER: http://localhost:8081/base
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  COOKIE: session_id=9a3b0e7a67ce4498c24a28e273869e2d2c95570c
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: multipart/form-data; boundary=----WebKitFormBoundarybssA4ZKsqnJ98q6p
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[22/Jun/2014:11:20:27] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 152, in upload
+    traitement.traitementFichier(savedFile)
+  File "webApp/traitement.py", line 8, in traitementFichier
+    print 'Traitement du fichier : '+file
+TypeError: cannot concatenate 'str' and 'file' objects
+
+[22/Jun/2014:11:21:13] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:11:21:13] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:11:21:13] ENGINE Bus STOPPING
+[22/Jun/2014:11:21:13] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:11:21:13] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:11:21:13] ENGINE Bus STOPPED
+[22/Jun/2014:11:21:13] ENGINE Bus EXITING
+[22/Jun/2014:11:21:13] ENGINE Bus EXITED
+[22/Jun/2014:11:21:13] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:11:21:13] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:11:21:13] ENGINE Listening for SIGHUP.
+[22/Jun/2014:11:21:13] ENGINE Listening for SIGTERM.
+[22/Jun/2014:11:21:13] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:11:21:13] ENGINE Bus STARTING
+[22/Jun/2014:11:21:13] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:11:21:13] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:11:21:13] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:11:21:13] ENGINE Bus STARTED
+[22/Jun/2014:11:21:17] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:11:21:17] ENGINE Bus STOPPING
+[22/Jun/2014:11:21:17] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:11:21:17] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:11:21:17] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:11:21:17] ENGINE Bus STOPPED
+[22/Jun/2014:11:21:17] ENGINE Bus EXITING
+[22/Jun/2014:11:21:17] ENGINE Bus EXITED
+[22/Jun/2014:11:21:17] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:11:21:19] ENGINE Listening for SIGHUP.
+[22/Jun/2014:11:21:19] ENGINE Listening for SIGTERM.
+[22/Jun/2014:11:21:19] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:11:21:19] ENGINE Bus STARTING
+[22/Jun/2014:11:21:19] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:11:21:19] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:11:21:19] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:11:21:19] ENGINE Bus STARTED
+[22/Jun/2014:11:21:30] HTTP 
+Request Headers:
+  Content-Length: 978526
+  REFERER: http://localhost:8081/base
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  COOKIE: session_id=9832e4c35a8cad5da754979a423e3314c6a0ab36
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryTyRAU9rSweTYue7d
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[22/Jun/2014:11:21:30] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 152, in upload
+    traitement.traitementFichier(direction+'docs/'+myFile.filename)
+  File "webApp/traitement.py", line 15, in traitementFichier
+    fichier = open("index1", "r")
+IOError: [Errno 2] No such file or directory: 'index1'
+
+[22/Jun/2014:11:25:19] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:11:25:19] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:11:25:19] ENGINE Bus STOPPING
+[22/Jun/2014:11:25:19] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:11:25:19] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:11:25:19] ENGINE Bus STOPPED
+[22/Jun/2014:11:25:19] ENGINE Bus EXITING
+[22/Jun/2014:11:25:19] ENGINE Bus EXITED
+[22/Jun/2014:11:25:19] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:11:25:19] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:11:33:06] ENGINE Listening for SIGHUP.
+[22/Jun/2014:11:33:06] ENGINE Listening for SIGTERM.
+[22/Jun/2014:11:33:06] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:11:33:06] ENGINE Bus STARTING
+[22/Jun/2014:11:33:06] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:11:33:06] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:11:33:06] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:11:33:06] ENGINE Bus STARTED
+[22/Jun/2014:11:33:21] HTTP 
+Request Headers:
+  Content-Length: 978526
+  REFERER: http://localhost:8081/base
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  COOKIE: session_id=efa7a6e684c4fd46b0a399cb284a911fb58ce425
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryvkhMfscpwdyx87RX
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[22/Jun/2014:11:33:21] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 155, in upload
+    initBase.initByDir(direction+'docs/')
+  File "webApp/initBase.py", line 15, in initByDir
+    traitement.traitementFichier(file)
+  File "webApp/traitement.py", line 15, in traitementFichier
+    fichier = open("index1", "r")
+IOError: [Errno 2] No such file or directory: 'index1'
+
+[22/Jun/2014:11:35:50] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/initBase.py changed.
+[22/Jun/2014:11:35:50] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:11:35:50] ENGINE Bus STOPPING
+[22/Jun/2014:11:35:50] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:11:35:50] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:11:35:50] ENGINE Bus STOPPED
+[22/Jun/2014:11:35:50] ENGINE Bus EXITING
+[22/Jun/2014:11:35:50] ENGINE Bus EXITED
+[22/Jun/2014:11:35:50] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:11:35:50] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:11:35:50] ENGINE Listening for SIGHUP.
+[22/Jun/2014:11:35:50] ENGINE Listening for SIGTERM.
+[22/Jun/2014:11:35:50] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:11:35:50] ENGINE Bus STARTING
+[22/Jun/2014:11:35:50] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:11:35:50] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:11:35:50] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:11:35:50] ENGINE Bus STARTED
+[22/Jun/2014:11:36:02] HTTP 
+Request Headers:
+  Content-Length: 978526
+  REFERER: http://localhost:8081/base
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  COOKIE: session_id=88d07261470edd4d7e852e253e2aad37b0c92893
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: multipart/form-data; boundary=----WebKitFormBoundarytr4wBTxcWUwGzzm6
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[22/Jun/2014:11:36:02] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 155, in upload
+    initBase.initByDir(direction+'docs/')
+  File "webApp/initBase.py", line 16, in initByDir
+    traitement.traitementFichier(file)
+  File "webApp/traitement.py", line 15, in traitementFichier
+    fichier = open("index1", "r")
+IOError: [Errno 2] No such file or directory: 'index1'
+
+[22/Jun/2014:11:36:14] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:11:36:14] ENGINE Bus STOPPING
+[22/Jun/2014:11:36:14] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:11:36:14] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:11:36:14] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:11:36:14] ENGINE Bus STOPPED
+[22/Jun/2014:11:36:14] ENGINE Bus EXITING
+[22/Jun/2014:11:36:14] ENGINE Bus EXITED
+[22/Jun/2014:11:36:14] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:11:36:16] ENGINE Listening for SIGHUP.
+[22/Jun/2014:11:36:16] ENGINE Listening for SIGTERM.
+[22/Jun/2014:11:36:16] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:11:36:16] ENGINE Bus STARTING
+[22/Jun/2014:11:36:16] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:11:36:16] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:11:36:16] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:11:36:16] ENGINE Bus STARTED
+[22/Jun/2014:11:36:27] HTTP 
+Request Headers:
+  Content-Length: 978526
+  REFERER: http://localhost:8081/base
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  COOKIE: session_id=68f5e0814aa44be39ea976662c06991c5d56a065
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryImNwrzbJTii96AdA
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[22/Jun/2014:11:36:27] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 155, in upload
+    initBase.initByDir(direction+'docs/')
+  File "webApp/initBase.py", line 16, in initByDir
+    traitement.traitementFichier(file)
+  File "webApp/traitement.py", line 15, in traitementFichier
+    fichier = open("index1", "r")
+IOError: [Errno 2] No such file or directory: 'index1'
+
+[22/Jun/2014:11:41:04] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:11:41:04] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:11:41:04] ENGINE Bus STOPPING
+[22/Jun/2014:11:41:04] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:11:41:04] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:11:41:04] ENGINE Bus STOPPED
+[22/Jun/2014:11:41:04] ENGINE Bus EXITING
+[22/Jun/2014:11:41:04] ENGINE Bus EXITED
+[22/Jun/2014:11:41:04] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:11:41:04] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:11:41:04] ENGINE Listening for SIGHUP.
+[22/Jun/2014:11:41:04] ENGINE Listening for SIGTERM.
+[22/Jun/2014:11:41:04] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:11:41:04] ENGINE Bus STARTING
+[22/Jun/2014:11:41:04] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:11:41:04] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:11:41:04] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:11:41:04] ENGINE Bus STARTED
+[22/Jun/2014:11:41:25] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:11:41:25] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:11:41:25] ENGINE Bus STOPPING
+[22/Jun/2014:11:41:25] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:11:41:25] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:11:41:25] ENGINE Bus STOPPED
+[22/Jun/2014:11:41:25] ENGINE Bus EXITING
+[22/Jun/2014:11:41:25] ENGINE Bus EXITED
+[22/Jun/2014:11:41:25] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:11:41:25] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:11:41:26] ENGINE Listening for SIGHUP.
+[22/Jun/2014:11:41:26] ENGINE Listening for SIGTERM.
+[22/Jun/2014:11:41:26] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:11:41:26] ENGINE Bus STARTING
+[22/Jun/2014:11:41:26] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:11:41:26] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:11:41:26] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:11:41:26] ENGINE Bus STARTED
+[22/Jun/2014:11:41:29] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:11:41:29] ENGINE Bus STOPPING
+[22/Jun/2014:11:41:29] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:11:41:29] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:11:41:29] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:11:41:29] ENGINE Bus STOPPED
+[22/Jun/2014:11:41:29] ENGINE Bus EXITING
+[22/Jun/2014:11:41:29] ENGINE Bus EXITED
+[22/Jun/2014:11:41:29] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:11:41:31] ENGINE Listening for SIGHUP.
+[22/Jun/2014:11:41:31] ENGINE Listening for SIGTERM.
+[22/Jun/2014:11:41:31] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:11:41:31] ENGINE Bus STARTING
+[22/Jun/2014:11:41:31] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:11:41:31] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:11:41:31] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:11:41:31] ENGINE Bus STARTED
+[22/Jun/2014:11:42:10] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:11:42:10] ENGINE Bus STOPPING
+[22/Jun/2014:11:42:10] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:11:42:10] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:11:42:10] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:11:42:10] ENGINE Bus STOPPED
+[22/Jun/2014:11:42:10] ENGINE Bus EXITING
+[22/Jun/2014:11:42:10] ENGINE Bus EXITED
+[22/Jun/2014:11:42:10] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:11:42:25] ENGINE Listening for SIGHUP.
+[22/Jun/2014:11:42:25] ENGINE Listening for SIGTERM.
+[22/Jun/2014:11:42:25] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:11:42:25] ENGINE Bus STARTING
+[22/Jun/2014:11:42:25] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:11:42:25] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:11:42:26] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:11:42:26] ENGINE Bus STARTED
+[22/Jun/2014:11:46:51] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:11:46:51] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:11:46:51] ENGINE Bus STOPPING
+[22/Jun/2014:11:46:51] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:11:46:51] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:11:46:51] ENGINE Bus STOPPED
+[22/Jun/2014:11:46:51] ENGINE Bus EXITING
+[22/Jun/2014:11:46:51] ENGINE Bus EXITED
+[22/Jun/2014:11:46:51] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:11:46:51] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:11:46:51] ENGINE Listening for SIGHUP.
+[22/Jun/2014:11:46:51] ENGINE Listening for SIGTERM.
+[22/Jun/2014:11:46:51] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:11:46:51] ENGINE Bus STARTING
+[22/Jun/2014:11:46:51] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:11:46:51] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:11:46:51] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:11:46:51] ENGINE Bus STARTED
+[22/Jun/2014:11:46:57] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:11:46:57] ENGINE Bus STOPPING
+[22/Jun/2014:11:46:57] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:11:46:57] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:11:46:57] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:11:46:57] ENGINE Bus STOPPED
+[22/Jun/2014:11:46:57] ENGINE Bus EXITING
+[22/Jun/2014:11:46:57] ENGINE Bus EXITED
+[22/Jun/2014:11:46:57] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:11:46:59] ENGINE Listening for SIGHUP.
+[22/Jun/2014:11:46:59] ENGINE Listening for SIGTERM.
+[22/Jun/2014:11:46:59] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:11:46:59] ENGINE Bus STARTING
+[22/Jun/2014:11:46:59] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:11:46:59] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:11:46:59] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:11:46:59] ENGINE Bus STARTED
+[22/Jun/2014:11:49:56] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:11:49:56] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:11:49:56] ENGINE Bus STOPPING
+[22/Jun/2014:11:49:56] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:11:49:56] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:11:49:56] ENGINE Bus STOPPED
+[22/Jun/2014:11:49:56] ENGINE Bus EXITING
+[22/Jun/2014:11:49:56] ENGINE Bus EXITED
+[22/Jun/2014:11:49:56] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:11:49:56] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:11:51:21] ENGINE Listening for SIGHUP.
+[22/Jun/2014:11:51:21] ENGINE Listening for SIGTERM.
+[22/Jun/2014:11:51:21] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:11:51:21] ENGINE Bus STARTING
+[22/Jun/2014:11:51:21] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:11:51:21] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:11:51:21] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:11:51:21] ENGINE Bus STARTED
+[22/Jun/2014:11:52:19] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:11:52:19] ENGINE Bus STOPPING
+[22/Jun/2014:11:52:19] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:11:52:19] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:11:52:19] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:11:52:19] ENGINE Bus STOPPED
+[22/Jun/2014:11:52:19] ENGINE Bus EXITING
+[22/Jun/2014:11:52:19] ENGINE Bus EXITED
+[22/Jun/2014:11:52:19] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:11:53:15] ENGINE Listening for SIGHUP.
+[22/Jun/2014:11:53:15] ENGINE Listening for SIGTERM.
+[22/Jun/2014:11:53:15] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:11:53:15] ENGINE Bus STARTING
+[22/Jun/2014:11:53:15] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:11:53:15] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:11:53:15] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:11:53:15] ENGINE Bus STARTED
+[22/Jun/2014:12:23:12] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:12:23:12] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:12:23:12] ENGINE Bus STOPPING
+[22/Jun/2014:12:23:12] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:12:23:12] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:12:23:12] ENGINE Bus STOPPED
+[22/Jun/2014:12:23:12] ENGINE Bus EXITING
+[22/Jun/2014:12:23:12] ENGINE Bus EXITED
+[22/Jun/2014:12:23:12] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:12:23:12] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:12:23:12] ENGINE Listening for SIGHUP.
+[22/Jun/2014:12:23:12] ENGINE Listening for SIGTERM.
+[22/Jun/2014:12:23:12] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:12:23:12] ENGINE Bus STARTING
+[22/Jun/2014:12:23:12] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:12:23:12] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:12:23:12] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:12:23:12] ENGINE Bus STARTED
+[22/Jun/2014:12:23:18] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:12:23:18] ENGINE Bus STOPPING
+[22/Jun/2014:12:23:18] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:12:23:18] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:12:23:18] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:12:23:18] ENGINE Bus STOPPED
+[22/Jun/2014:12:23:18] ENGINE Bus EXITING
+[22/Jun/2014:12:23:18] ENGINE Bus EXITED
+[22/Jun/2014:12:23:18] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:12:23:43] ENGINE Listening for SIGHUP.
+[22/Jun/2014:12:23:43] ENGINE Listening for SIGTERM.
+[22/Jun/2014:12:23:43] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:12:23:43] ENGINE Bus STARTING
+[22/Jun/2014:12:23:43] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:12:23:43] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:12:23:43] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:12:23:43] ENGINE Bus STARTED
+[22/Jun/2014:12:24:53] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:12:24:53] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:12:24:53] ENGINE Bus STOPPING
+[22/Jun/2014:12:24:53] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:12:24:53] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:12:24:53] ENGINE Bus STOPPED
+[22/Jun/2014:12:24:53] ENGINE Bus EXITING
+[22/Jun/2014:12:24:53] ENGINE Bus EXITED
+[22/Jun/2014:12:24:53] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:12:24:53] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:12:24:53] ENGINE Listening for SIGHUP.
+[22/Jun/2014:12:24:53] ENGINE Listening for SIGTERM.
+[22/Jun/2014:12:24:53] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:12:24:53] ENGINE Bus STARTING
+[22/Jun/2014:12:24:53] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:12:24:53] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:12:24:53] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:12:24:53] ENGINE Bus STARTED
+[22/Jun/2014:12:25:00] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:12:25:00] ENGINE Bus STOPPING
+[22/Jun/2014:12:25:00] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:12:25:00] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:12:25:00] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:12:25:00] ENGINE Bus STOPPED
+[22/Jun/2014:12:25:00] ENGINE Bus EXITING
+[22/Jun/2014:12:25:00] ENGINE Bus EXITED
+[22/Jun/2014:12:25:00] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:12:25:07] ENGINE Listening for SIGHUP.
+[22/Jun/2014:12:25:07] ENGINE Listening for SIGTERM.
+[22/Jun/2014:12:25:07] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:12:25:07] ENGINE Bus STARTING
+[22/Jun/2014:12:25:07] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:12:25:07] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:12:25:07] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:12:25:07] ENGINE Bus STARTED
+[22/Jun/2014:12:46:03] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:12:46:03] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:12:46:03] ENGINE Bus STOPPING
+[22/Jun/2014:12:46:03] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:12:46:03] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:12:46:03] ENGINE Bus STOPPED
+[22/Jun/2014:12:46:03] ENGINE Bus EXITING
+[22/Jun/2014:12:46:03] ENGINE Bus EXITED
+[22/Jun/2014:12:46:03] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:12:46:03] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:12:46:03] ENGINE Listening for SIGHUP.
+[22/Jun/2014:12:46:03] ENGINE Listening for SIGTERM.
+[22/Jun/2014:12:46:03] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:12:46:03] ENGINE Bus STARTING
+[22/Jun/2014:12:46:03] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:12:46:03] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:12:46:04] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:12:46:04] ENGINE Bus STARTED
+[22/Jun/2014:12:46:06] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:12:46:06] ENGINE Bus STOPPING
+[22/Jun/2014:12:46:06] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:12:46:06] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:12:46:06] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:12:46:06] ENGINE Bus STOPPED
+[22/Jun/2014:12:46:06] ENGINE Bus EXITING
+[22/Jun/2014:12:46:06] ENGINE Bus EXITED
+[22/Jun/2014:12:46:06] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:12:46:11] ENGINE Listening for SIGHUP.
+[22/Jun/2014:12:46:11] ENGINE Listening for SIGTERM.
+[22/Jun/2014:12:46:11] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:12:46:11] ENGINE Bus STARTING
+[22/Jun/2014:12:46:11] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:12:46:11] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:12:46:11] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:12:46:11] ENGINE Bus STARTED
+[22/Jun/2014:12:46:55] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:12:46:55] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:12:46:55] ENGINE Bus STOPPING
+[22/Jun/2014:12:46:55] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:12:46:55] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:12:46:55] ENGINE Bus STOPPED
+[22/Jun/2014:12:46:55] ENGINE Bus EXITING
+[22/Jun/2014:12:46:55] ENGINE Bus EXITED
+[22/Jun/2014:12:46:55] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:12:46:55] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:12:46:55] ENGINE Listening for SIGHUP.
+[22/Jun/2014:12:46:55] ENGINE Listening for SIGTERM.
+[22/Jun/2014:12:46:55] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:12:46:55] ENGINE Bus STARTING
+[22/Jun/2014:12:46:55] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:12:46:55] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:12:46:55] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:12:46:55] ENGINE Bus STARTED
+[22/Jun/2014:12:47:01] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:12:47:01] ENGINE Bus STOPPING
+[22/Jun/2014:12:47:01] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:12:47:01] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:12:47:01] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:12:47:01] ENGINE Bus STOPPED
+[22/Jun/2014:12:47:01] ENGINE Bus EXITING
+[22/Jun/2014:12:47:01] ENGINE Bus EXITED
+[22/Jun/2014:12:47:01] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:12:47:03] ENGINE Listening for SIGHUP.
+[22/Jun/2014:12:47:03] ENGINE Listening for SIGTERM.
+[22/Jun/2014:12:47:03] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:12:47:03] ENGINE Bus STARTING
+[22/Jun/2014:12:47:03] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:12:47:03] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:12:47:03] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:12:47:03] ENGINE Bus STARTED
+[22/Jun/2014:12:51:42] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/initBase.py changed.
+[22/Jun/2014:12:51:42] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:12:51:42] ENGINE Bus STOPPING
+[22/Jun/2014:12:51:42] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:12:51:42] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:12:51:42] ENGINE Bus STOPPED
+[22/Jun/2014:12:51:42] ENGINE Bus EXITING
+[22/Jun/2014:12:51:42] ENGINE Bus EXITED
+[22/Jun/2014:12:51:42] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:12:51:42] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:12:51:42] ENGINE Listening for SIGHUP.
+[22/Jun/2014:12:51:42] ENGINE Listening for SIGTERM.
+[22/Jun/2014:12:51:42] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:12:51:42] ENGINE Bus STARTING
+[22/Jun/2014:12:51:42] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:12:51:42] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:12:51:42] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:12:51:42] ENGINE Bus STARTED
+[22/Jun/2014:12:52:35] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:12:52:35] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:12:52:35] ENGINE Bus STOPPING
+[22/Jun/2014:12:52:35] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:12:52:35] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:12:52:35] ENGINE Bus STOPPED
+[22/Jun/2014:12:52:35] ENGINE Bus EXITING
+[22/Jun/2014:12:52:35] ENGINE Bus EXITED
+[22/Jun/2014:12:52:35] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:12:52:35] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:12:52:35] ENGINE Listening for SIGHUP.
+[22/Jun/2014:12:52:35] ENGINE Listening for SIGTERM.
+[22/Jun/2014:12:52:35] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:12:52:35] ENGINE Bus STARTING
+[22/Jun/2014:12:52:35] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:12:52:35] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:12:52:35] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:12:52:35] ENGINE Bus STARTED
+[22/Jun/2014:12:56:22] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:12:56:22] ENGINE Bus STOPPING
+[22/Jun/2014:12:56:22] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:12:56:22] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:12:56:22] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:12:56:22] ENGINE Bus STOPPED
+[22/Jun/2014:12:56:22] ENGINE Bus EXITING
+[22/Jun/2014:12:56:22] ENGINE Bus EXITED
+[22/Jun/2014:12:56:22] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:12:56:25] ENGINE Listening for SIGHUP.
+[22/Jun/2014:12:56:25] ENGINE Listening for SIGTERM.
+[22/Jun/2014:12:56:25] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:12:56:25] ENGINE Bus STARTING
+[22/Jun/2014:12:56:25] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:12:56:25] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:12:56:25] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:12:56:25] ENGINE Bus STARTED
+[22/Jun/2014:12:57:11] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:12:57:11] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:12:57:11] ENGINE Bus STOPPING
+[22/Jun/2014:12:57:11] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:12:57:11] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:12:57:11] ENGINE Bus STOPPED
+[22/Jun/2014:12:57:11] ENGINE Bus EXITING
+[22/Jun/2014:12:57:11] ENGINE Bus EXITED
+[22/Jun/2014:12:57:11] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:12:57:11] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:12:57:11] ENGINE Listening for SIGHUP.
+[22/Jun/2014:12:57:11] ENGINE Listening for SIGTERM.
+[22/Jun/2014:12:57:11] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:12:57:11] ENGINE Bus STARTING
+[22/Jun/2014:12:57:11] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:12:57:11] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:12:57:11] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:12:57:11] ENGINE Bus STARTED
+[22/Jun/2014:12:59:07] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:12:59:07] ENGINE Bus STOPPING
+[22/Jun/2014:12:59:07] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:12:59:07] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:12:59:07] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:12:59:07] ENGINE Bus STOPPED
+[22/Jun/2014:12:59:07] ENGINE Bus EXITING
+[22/Jun/2014:12:59:07] ENGINE Bus EXITED
+[22/Jun/2014:12:59:07] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:12:59:08] ENGINE Listening for SIGHUP.
+[22/Jun/2014:12:59:08] ENGINE Listening for SIGTERM.
+[22/Jun/2014:12:59:08] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:12:59:08] ENGINE Bus STARTING
+[22/Jun/2014:12:59:08] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:12:59:08] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:12:59:09] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:12:59:09] ENGINE Bus STARTED
+[22/Jun/2014:13:04:16] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:13:04:16] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:13:04:16] ENGINE Bus STOPPING
+[22/Jun/2014:13:04:16] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:13:04:16] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:13:04:16] ENGINE Bus STOPPED
+[22/Jun/2014:13:04:16] ENGINE Bus EXITING
+[22/Jun/2014:13:04:16] ENGINE Bus EXITED
+[22/Jun/2014:13:04:16] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:13:04:16] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:13:04:16] ENGINE Listening for SIGHUP.
+[22/Jun/2014:13:04:16] ENGINE Listening for SIGTERM.
+[22/Jun/2014:13:04:16] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:13:04:16] ENGINE Bus STARTING
+[22/Jun/2014:13:04:16] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:13:04:16] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:13:04:16] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:13:04:16] ENGINE Bus STARTED
+[22/Jun/2014:13:04:19] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:13:04:19] ENGINE Bus STOPPING
+[22/Jun/2014:13:04:19] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:13:04:19] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:13:04:19] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:13:04:19] ENGINE Bus STOPPED
+[22/Jun/2014:13:04:19] ENGINE Bus EXITING
+[22/Jun/2014:13:04:19] ENGINE Bus EXITED
+[22/Jun/2014:13:04:19] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:13:04:20] ENGINE Listening for SIGHUP.
+[22/Jun/2014:13:04:20] ENGINE Listening for SIGTERM.
+[22/Jun/2014:13:04:20] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:13:04:20] ENGINE Bus STARTING
+[22/Jun/2014:13:04:20] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:13:04:20] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:13:04:21] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:13:04:21] ENGINE Bus STARTED
+[22/Jun/2014:13:06:05] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:13:06:05] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:13:06:05] ENGINE Bus STOPPING
+[22/Jun/2014:13:06:05] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:13:06:05] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:13:06:05] ENGINE Bus STOPPED
+[22/Jun/2014:13:06:05] ENGINE Bus EXITING
+[22/Jun/2014:13:06:05] ENGINE Bus EXITED
+[22/Jun/2014:13:06:05] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:13:06:05] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:13:06:05] ENGINE Listening for SIGHUP.
+[22/Jun/2014:13:06:05] ENGINE Listening for SIGTERM.
+[22/Jun/2014:13:06:05] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:13:06:05] ENGINE Bus STARTING
+[22/Jun/2014:13:06:05] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:13:06:05] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:13:06:05] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:13:06:05] ENGINE Bus STARTED
+[22/Jun/2014:13:06:18] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:13:06:18] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:13:06:18] ENGINE Bus STOPPING
+[22/Jun/2014:13:06:18] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:13:06:18] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:13:06:18] ENGINE Bus STOPPED
+[22/Jun/2014:13:06:18] ENGINE Bus EXITING
+[22/Jun/2014:13:06:18] ENGINE Bus EXITED
+[22/Jun/2014:13:06:18] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:13:06:18] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:13:06:18] ENGINE Listening for SIGHUP.
+[22/Jun/2014:13:06:18] ENGINE Listening for SIGTERM.
+[22/Jun/2014:13:06:18] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:13:06:18] ENGINE Bus STARTING
+[22/Jun/2014:13:06:18] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:13:06:18] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:13:06:18] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:13:06:18] ENGINE Bus STARTED
+[22/Jun/2014:13:06:27] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:13:06:27] ENGINE Bus STOPPING
+[22/Jun/2014:13:06:27] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:13:06:27] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:13:06:27] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:13:06:27] ENGINE Bus STOPPED
+[22/Jun/2014:13:06:27] ENGINE Bus EXITING
+[22/Jun/2014:13:06:27] ENGINE Bus EXITED
+[22/Jun/2014:13:06:27] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:13:06:28] ENGINE Listening for SIGHUP.
+[22/Jun/2014:13:06:28] ENGINE Listening for SIGTERM.
+[22/Jun/2014:13:06:28] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:13:06:28] ENGINE Bus STARTING
+[22/Jun/2014:13:06:28] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:13:06:28] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:13:06:29] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:13:06:29] ENGINE Bus STARTED
+[22/Jun/2014:13:06:51] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:13:06:51] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:13:06:51] ENGINE Bus STOPPING
+[22/Jun/2014:13:06:51] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:13:06:51] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:13:06:51] ENGINE Bus STOPPED
+[22/Jun/2014:13:06:51] ENGINE Bus EXITING
+[22/Jun/2014:13:06:51] ENGINE Bus EXITED
+[22/Jun/2014:13:06:51] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:13:06:51] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:13:06:51] ENGINE Listening for SIGHUP.
+[22/Jun/2014:13:06:51] ENGINE Listening for SIGTERM.
+[22/Jun/2014:13:06:51] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:13:06:51] ENGINE Bus STARTING
+[22/Jun/2014:13:06:51] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:13:06:51] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:13:06:51] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:13:06:51] ENGINE Bus STARTED
+[22/Jun/2014:13:08:23] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:13:08:23] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:13:08:23] ENGINE Bus STOPPING
+[22/Jun/2014:13:08:23] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:13:08:23] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:13:08:23] ENGINE Bus STOPPED
+[22/Jun/2014:13:08:23] ENGINE Bus EXITING
+[22/Jun/2014:13:08:23] ENGINE Bus EXITED
+[22/Jun/2014:13:08:23] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:13:08:23] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:13:08:23] ENGINE Listening for SIGHUP.
+[22/Jun/2014:13:08:23] ENGINE Listening for SIGTERM.
+[22/Jun/2014:13:08:23] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:13:08:23] ENGINE Bus STARTING
+[22/Jun/2014:13:08:23] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:13:08:23] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:13:08:23] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:13:08:23] ENGINE Bus STARTED
+[22/Jun/2014:13:09:19] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:13:09:19] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:13:09:19] ENGINE Bus STOPPING
+[22/Jun/2014:13:09:19] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:13:09:19] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:13:09:19] ENGINE Bus STOPPED
+[22/Jun/2014:13:09:19] ENGINE Bus EXITING
+[22/Jun/2014:13:09:19] ENGINE Bus EXITED
+[22/Jun/2014:13:09:19] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:13:09:19] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:13:09:19] ENGINE Listening for SIGHUP.
+[22/Jun/2014:13:09:19] ENGINE Listening for SIGTERM.
+[22/Jun/2014:13:09:19] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:13:09:19] ENGINE Bus STARTING
+[22/Jun/2014:13:09:19] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:13:09:19] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:13:09:19] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:13:09:19] ENGINE Bus STARTED
+[22/Jun/2014:13:09:21] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:13:09:21] ENGINE Bus STOPPING
+[22/Jun/2014:13:09:21] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:13:09:21] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:13:09:21] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:13:09:21] ENGINE Bus STOPPED
+[22/Jun/2014:13:09:21] ENGINE Bus EXITING
+[22/Jun/2014:13:09:21] ENGINE Bus EXITED
+[22/Jun/2014:13:09:21] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:13:09:23] ENGINE Listening for SIGHUP.
+[22/Jun/2014:13:09:23] ENGINE Listening for SIGTERM.
+[22/Jun/2014:13:09:23] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:13:09:23] ENGINE Bus STARTING
+[22/Jun/2014:13:09:23] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:13:09:23] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:13:09:23] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:13:09:23] ENGINE Bus STARTED
+[22/Jun/2014:13:09:34] HTTP 
+Request Headers:
+  Content-Length: 189777
+  REFERER: http://localhost:8081/base
+  HOST: localhost:8081
+  ORIGIN: http://localhost:8081
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36
+  COOKIE: session_id=fbe44f8c6e5bb57dac9c55ab34bb8c18156f24fc
+  ACCEPT-LANGUAGE: fr,en-US;q=0.8,en;q=0.6,zh-TW;q=0.4,zh;q=0.2
+  Content-Type: multipart/form-data; boundary=----WebKitFormBoundary3NXCWC7C750cDwKd
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[22/Jun/2014:13:09:34] HTTP Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 212, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "webApp/__init__.py", line 153, in upload
+    subprocess.call(['python','traitement.py',myFile],cwd = direction);
+  File "/usr/lib/python2.7/subprocess.py", line 522, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/usr/lib/python2.7/subprocess.py", line 710, in __init__
+    errread, errwrite)
+  File "/usr/lib/python2.7/subprocess.py", line 1327, in _execute_child
+    raise child_exception
+TypeError: execv() arg 2 must contain only strings
+
+[22/Jun/2014:13:09:54] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:13:09:54] ENGINE Bus STOPPING
+[22/Jun/2014:13:09:54] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:13:09:54] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:13:09:54] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:13:09:54] ENGINE Bus STOPPED
+[22/Jun/2014:13:09:54] ENGINE Bus EXITING
+[22/Jun/2014:13:09:54] ENGINE Bus EXITED
+[22/Jun/2014:13:09:54] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:13:10:14] ENGINE Listening for SIGHUP.
+[22/Jun/2014:13:10:14] ENGINE Listening for SIGTERM.
+[22/Jun/2014:13:10:14] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:13:10:14] ENGINE Bus STARTING
+[22/Jun/2014:13:10:14] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:13:10:14] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:13:10:14] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:13:10:14] ENGINE Bus STARTED
+[22/Jun/2014:13:11:20] ENGINE Restarting because /home/bilous/IdeaProjects/etronik/webApp/__init__.py changed.
+[22/Jun/2014:13:11:20] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:13:11:20] ENGINE Bus STOPPING
+[22/Jun/2014:13:11:20] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:13:11:20] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:13:11:20] ENGINE Bus STOPPED
+[22/Jun/2014:13:11:20] ENGINE Bus EXITING
+[22/Jun/2014:13:11:20] ENGINE Bus EXITED
+[22/Jun/2014:13:11:20] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:13:11:20] ENGINE Re-spawning /usr/local/bin/cherryd -i webApp -c dev.conf
+[22/Jun/2014:13:11:20] ENGINE Listening for SIGHUP.
+[22/Jun/2014:13:11:20] ENGINE Listening for SIGTERM.
+[22/Jun/2014:13:11:20] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:13:11:20] ENGINE Bus STARTING
+[22/Jun/2014:13:11:20] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:13:11:20] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:13:11:20] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:13:11:20] ENGINE Bus STARTED
+[22/Jun/2014:13:21:10] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:13:21:10] ENGINE Bus STOPPING
+[22/Jun/2014:13:21:10] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:13:21:10] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:13:21:10] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:13:21:10] ENGINE Bus STOPPED
+[22/Jun/2014:13:21:10] ENGINE Bus EXITING
+[22/Jun/2014:13:21:10] ENGINE Bus EXITED
+[22/Jun/2014:13:21:10] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:13:21:11] ENGINE Listening for SIGHUP.
+[22/Jun/2014:13:21:11] ENGINE Listening for SIGTERM.
+[22/Jun/2014:13:21:11] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:13:21:11] ENGINE Bus STARTING
+[22/Jun/2014:13:21:11] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:13:21:11] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:13:21:11] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:13:21:11] ENGINE Bus STARTED
+[22/Jun/2014:13:25:00] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:13:25:00] ENGINE Bus STOPPING
+[22/Jun/2014:13:25:00] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:13:25:00] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:13:25:00] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:13:25:00] ENGINE Bus STOPPED
+[22/Jun/2014:13:25:00] ENGINE Bus EXITING
+[22/Jun/2014:13:25:00] ENGINE Bus EXITED
+[22/Jun/2014:13:25:00] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:13:25:02] ENGINE Listening for SIGHUP.
+[22/Jun/2014:13:25:02] ENGINE Listening for SIGTERM.
+[22/Jun/2014:13:25:02] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:13:25:02] ENGINE Bus STARTING
+[22/Jun/2014:13:25:02] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:13:25:02] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:13:25:02] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:13:25:02] ENGINE Bus STARTED
+[22/Jun/2014:13:29:04] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2014:13:29:04] ENGINE Bus STOPPING
+[22/Jun/2014:13:29:04] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8081)) shut down
+[22/Jun/2014:13:29:04] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2014:13:29:04] ENGINE Stopped thread '_TimeoutMonitor'.
+[22/Jun/2014:13:29:04] ENGINE Bus STOPPED
+[22/Jun/2014:13:29:04] ENGINE Bus EXITING
+[22/Jun/2014:13:29:04] ENGINE Bus EXITED
+[22/Jun/2014:13:29:04] ENGINE Waiting for child threads to terminate...
+[22/Jun/2014:13:29:06] ENGINE Listening for SIGHUP.
+[22/Jun/2014:13:29:06] ENGINE Listening for SIGTERM.
+[22/Jun/2014:13:29:06] ENGINE Listening for SIGUSR1.
+[22/Jun/2014:13:29:06] ENGINE Bus STARTING
+[22/Jun/2014:13:29:06] ENGINE Started monitor thread '_TimeoutMonitor'.
+[22/Jun/2014:13:29:06] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2014:13:29:06] ENGINE Serving on http://127.0.0.1:8081
+[22/Jun/2014:13:29:06] ENGINE Bus STARTED
