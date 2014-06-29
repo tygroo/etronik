@@ -140,7 +140,7 @@ class Root:
                 if not data:
                         break
                 size += len(data)
-        savedFile=open(direction+'docs/'+myFile.filename, 'wb')
+        savedFile=open(direction+'docs/new/'+myFile.filename, 'wb')
         savedFile.write(allData)
         savedFile.close()
         file = myFile.filename
@@ -150,11 +150,12 @@ class Root:
         
         #traitement.traitementFichier(direction+'docs/'+myFile.filename)
         #subprocess.call(['python','traitement.py',myFile.filename],cwd = direction);
-        subprocess.call(['python','initialisation_bdd.py'],cwd = direction);
+        subprocess.call(['python','updateIndex.py'],cwd = direction);
         #initBase.initByDir(direction+'docs/')
         ##############################################
 
         template_index=env.get_template('index.html')
         return template_index.render()
+        
 
         

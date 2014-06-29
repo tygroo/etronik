@@ -1,0 +1,287 @@
+Projet MultiThreading C#  Juin 2014
+
+INGÉNIERIE
+
+INFORMATIQUE
+ 4ÈME ANNÉE
+
+   DÉROULEMENT
+
+ Présentation
+ Client
+ Serveur
+ Démonstration 
+ Conclusion
+
+PRÉSENTATION
+
+ Projet MultiThreading C#
+ Application de gestion d’impression
+ Diagramme de séquence
+ Architecture de la solution :
+○ Client : utilisateur d’imprimante
+○ Serveur : gestionnaire d’impression
+
+   DIAGRAMME DE SÉQUENCE
+
+   ARCHITECTURE CLIENT   MÉCANISME
+
+ Séquence type d’une utilisation client:
+
+○ L’Utilisateur choisit le(s) document(s) à imprimer
+○ Le Client envoi le(s) fichier(s) sélectionnés vers le 
+
+serveur
+
+○ L’Utilisateur peut suivre la progression d’envoi en 
+
+temps réelle
+
+○ L’Utilisateur peut suivre la progression 
+
+d’impression en temps réelle
+
+   ARCHITECTURE CLIENT       MÉCANISME
+
+ Envoi individuel ou simultané de documents
+
+ Suivi de la progression des envois
+
+ Suivi de la progression des impressions en 
+
+cours
+
+   ARCHITECTURE CLIENT   MÉCANISME
+
+   ARCHITECTURE CLIENT   EXEMPLE
+
+ private void envoi()
+       {
+           string adresseServer = adresseServerTextBox.Text;
+           int portServer = int.Parse(portServerTextBox.Text);
+           for (int i = 0; i < tableModel1.Rows.Count; i++)
+           {
+               Row theRow = tableModel1.Rows[i]; 
+              //On recupere le nom et l'emplacement du fichier à envoyer
+               string filePath = tableModel1.Rows[i].Cells[0].Text.ToString();
+              // On initialise et lance un pool de thread
+              workerThread = new Thread(() => workerObject.envoiFichier(filePath, 
+adresseServerTextBox.Text, int.Parse(portServerTextBox.Text), formUpdater,dic, 
+theRow));
+              workerThread.Start();
+           }
+       }
+
+   ARCHITECTURE CLIENT   EXEMPLE
+
+public void envoiFichier(string filePath, string adresseServer, int portServer, IFormUpdater form1, Dictionary<string, 
+Object> dic, Object row)
+     {
+           try
+           {
+               TcpClient client = new TcpClient(adresseServer, portServer);
+
+               StreamReader sr = new StreamReader(client.GetStream());
+
+               string unid = sr.ReadLine();
+               dic.Add(unid, row);
+               Stream s = client.GetStream();
+               FileStream fs = File.OpenRead(filePath);
+               int nbRead;
+               byte[] buffer = new byte[1024];
+               while (((nbRead = fs.Read(buffer, 0, buffer.Length)) > 0) && !_shouldStop)
+               {
+                   s.Write(buffer, 0, nbRead);
+
+                   nbOctetSent += taillebuffer;
+                   res = (nbOctetSent / taillefichier);
+                   res *= 100;
+                   if (oldRes != (int)res)
+                   {
+                       form1.majProgressBar(unid, (int)res);
+                   }
+               }
+       }
+}
+
+   ARCHITECTURE CLIENT   EXEMPLE
+
+   public void majProgressBar (string unid, int res)
+       {
+           form1.BeginInvoke(form1.myDelegate, new object[] {unid,res});
+       }
+
+   ARCHITECTURE CLIENT   EXEMPLE
+
+myDelegate = new delegateForm(majForm);
+
+private void majForm (string unid, int percent)
+       {
+           Row theRow = (Row)dic[unid];
+           if (theRow.Cells[2].Text == "En attente... [0/2]")
+               theRow.Cells[2].Text = "Envoi en cours... [1/2]";
+
+           if (theRow.Cells[2].Text == "Impression en attente... [1/2]")
+               theRow.Cells[2].Text = "Impression en cours... [1/2]";
+
+           theRow.Cells[1].Data = percent;
+
+           if (percent >= 100 && theRow.Cells[2].Text == "Envoi en cours... [1/2]")
+           {
+               tableModel2.Rows.Add(theRow);
+               tableModel1.Rows.Remove(theRow);
+               theRow.Cells[2].Text = "Impression en attente... [1/2]";
+               theRow.Cells[1].Data = 0;
+               if (tableModel1.Rows.Count == 0)
+                   btnSendFile.Text = "Envoyer";
+           }
+           else if (percent >= 100 && theRow.Cells[2].Text == "Impression en cours... [1/2]")
+               theRow.Cells[2].Text = "Impression terminée... [2/2]";
+
+           table1.Refresh();
+           table1.AutoResizeColumnWidths();
+           table2.Refresh();
+           table2.AutoResizeColumnWidths();
+ 
+       }
+
+   ARCHITECTURE SERVEUR       FONCTIONNALITÉS
+
+ Réception de plusieurs fichiers simultanés
+
+ Gestion des impressions sur trois 
+
+imprimantes
+
+ Gestion des arrêts – erreurs – mise hors 
+
+ligne
+
+   ARCHITECTURE SERVEUR       MÉCANISME
+
+   ARCHITECTURE SERVEUR       MÉCANISME
+
+Utilisation d’une synchronisation bi-directionnelle de type AutoReset Event.
+
+Réveil du pool d’impression
+
+A : Transfert 
+B : Pool impression
+
+   ARCHITECTURE SERVEUR       EXEMPLE
+
+Fin du transfert dans la classe Transfert
+
+private void startTransfert(IFormUpdater formUpdater)
+{
+/* … */
+
+while ((nbRead = s.Read(buffer, 0, buffer.Length)) > 0)
+        {
+            /* … */
+        }
+        fs.Flush();
+        fs.Close();
+        EventWaitHandle.OpenExisting("PoolReady").WaitOne();
+        System.IO.File.Move(writeDirectoryPath + "\\$" + unid + "_" + name, 
+
+writeDirectoryPath + "\\" + unid + "_" + name);
+
+        EventWaitHandle.OpenExisting("PoolPrint").Set();
+}
+
+   ARCHITECTURE SERVEUR       EXEMPLE
+
+Traitement dans la classe PoolImpression
+
+public void Imprimer ()
+{
+        while (!stop)
+        {
+            whPoolReady.Set();
+            whPoolPrint.WaitOne();
+            }
+/* … */
+}
+
+   FONCTIONNEMENT IMPRIMANTE
+
+ Une imprimante est composée de 3 
+
+threads:
+
+○ Méthodes de classe servant d’interface avec le 
+
+reste de l’application
+
+○ Thread d’impression
+
+○ Thread de temps
+
+   FONCTIONNEMENT THREAD IMPRESSION
+
+ Utilisation d’un EventWaitHandle de type 
+
+Autoreset :
+
+○ Tant que la file d’impression est vide => 
+
+imprimante en attente
+
+○ Chaque ajout d’impression par le pool dans 
+
+l’imprimante => déclenche un Set
+
+   ARCHITECTURE SERVEUR       EXEMPLE
+
+Méthode imprimer() dans la classe Imprimantes
+
+public void imprimer()
+{
+        while (!stop)
+        {
+            while (impressionEnAttente.Count() > 0)
+            {   
+                imprimerPremier();
+                if (impressionEnAttente.Count > 0)
+                {
+                    impressionEnAttente.RemoveFirst();
+                }
+            }
+            try
+            {
+
+whEnAttente.WaitOne();
+
+            }
+            catch (ThreadInterruptedException)
+            {
+                Console.WriteLine("Thread d'impression interrompu " + id);
+            } 
+}
+
+   ARCHITECTURE SERVEUR       MÉCANISME
+
+Interruption d’une imprimante
+
+La séquence suivante est utilisée lors de l’arrêt,
+
+ la mise hors ligne ou la mise en erreur de l’imprimante. 
+
+A : Processus interrompant l’impression
+B : Processus d’impression
+C : Processus de gestion du temps d’impression
+
+DÉMONSTRATION
+
+   CONCLUSION
+
+ Mise en œuvre des principes du 
+
+multithreading
+
+ Appliquer à la gestion d’un serveur 
+
+d’impression
+
+

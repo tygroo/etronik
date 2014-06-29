@@ -18,4 +18,5 @@ db.command( { "dropDatabase" : 1 } )
 dirs = os.listdir('docs/')
 dir = ('docs/')
 for file in dirs:
-	traitement.traitementFichier(file)
+	if os.path.isfile(os.path.join('docs/',file)):
+		traitement.traitementFichier(file)

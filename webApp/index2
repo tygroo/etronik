@@ -1,0 +1,68 @@
+   DÉROULEMENT
+
+ Présentation
+ Client
+ Serveur
+ Démonstration 
+ Conclusion
+
+PRÉSENTATION
+
+ Projet MultiThreading C#
+ Application de gestion d’impression
+ Diagramme de séquence
+ Architecture de la solution :
+○ Client : utilisateur d’imprimante
+○ Serveur : gestionnaire d’impression
+
+   DIAGRAMME DE SÉQUENCE
+
+   ARCHITECTURE CLIENT   MÉCANISME
+
+ Séquence type d’une utilisation client:
+
+○ L’Utilisateur choisit le(s) document(s) à imprimer
+○ Le Client envoi le(s) fichier(s) sélectionnés vers le 
+
+serveur
+
+○ L’Utilisateur peut suivre la progression d’envoi en 
+
+temps réelle
+
+○ L’Utilisateur peut suivre la progression 
+
+d’impression en temps réelle
+
+   ARCHITECTURE CLIENT       MÉCANISME
+
+ Envoi individuel ou simultané de documents
+
+ Suivi de la progression des envois
+
+ Suivi de la progression des impressions en 
+
+cours
+
+   ARCHITECTURE CLIENT   MÉCANISME
+
+   ARCHITECTURE CLIENT   EXEMPLE
+
+ private void envoi()
+       {
+           string adresseServer = adresseServerTextBox.Text;
+           int portServer = int.Parse(portServerTextBox.Text);
+           for (int i = 0; i < tableModel1.Rows.Count; i++)
+           {
+               Row theRow = tableModel1.Rows[i]; 
+              //On recupere le nom et l'emplacement du fichier à envoyer
+               string filePath = tableModel1.Rows[i].Cells[0].Text.ToString();
+              // On initialise et lance un pool de thread
+              workerThread = new Thread(() => workerObject.envoiFichier(filePath, 
+adresseServerTextBox.Text, int.Parse(portServerTextBox.Text), formUpdater,dic, 
+theRow));
+              workerThread.Start();
+           }
+       }
+
+
